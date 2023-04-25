@@ -5,17 +5,22 @@ using UnityEngine;
 public class ColorSpriteChange : MonoBehaviour
 {
     SpriteRenderer _spriteRenderer;
+    UnityEngine.Rendering.Universal.Light2D _objectLight;
+
     [SerializeField]
-    float interval = 0.5f;
+    float interval = 0.1f;
     float randomNumber;
     float m_Hue;
     float m_Saturation = 1;
     float m_Value = 1f;
+    float m_Intensity = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _objectLight = GetComponentInChildren<UnityEngine.Rendering.Universal.Light2D>();
+        Debug.Log(_objectLight);
 
         StartCoroutine(ChangeColor());
     }
@@ -39,9 +44,13 @@ public class ColorSpriteChange : MonoBehaviour
                 m_Value = 1;
             }
 
-            // Cambia el color del objeto
-            _spriteRenderer.material.color = Color.HSVToRGB(m_Hue, m_Saturation, m_Value);
+            m_Intensity = Random.Range(0.5f, 2f);
+            _objectLight.intensity = m_Intensity;
 
+            // Cambia el color del objeto
+            Color newColor = Color.HSVToRGB(m_Hue, m_Saturation, m_Value);
+            _spriteRenderer.material.color = newColor;
+            _objectLight.color = newColor;
 
             yield return new WaitForSeconds(interval);
         }
