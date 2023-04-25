@@ -11,7 +11,6 @@ public class InputMover : MonoBehaviour
     private GameObject player;
 
     Vector2 _input;
-    bool _isSprinting = false;
 
     CameraShake _cameraShake;
 
@@ -33,9 +32,6 @@ public class InputMover : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    [SerializeField]
-    private float walking;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +46,6 @@ public class InputMover : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        DoOnSprint();
         if (controlType == ControlType.Force)
         {
             MoveByFoce();           
@@ -59,70 +54,28 @@ public class InputMover : MonoBehaviour
         {
             Move();         
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1)) { Temblar(); }
     }
     private void OnMove(InputValue value)
     {
         _input = value.Get<Vector2>();
     }
-    private void DoOnSprint()
-    {
-        //OnSprint();
-        Sprint();
-    }
-    //private void OnSprint(InputValue sprint)
-    //{
-    //    if(sprint.isPressed == false)
-    //    {
-    //        _isSprinting = false;
-    //        Debug.Log("Nosprint");
-    //    }
-    //    else
-    //    {
-    //        _isSprinting = true;
-    //        Debug.Log("sprint");
-    //    }
-    //}
-    private void Sprint()
-    {
-        if(Input.GetKey(KeyCode.LeftShift))
-        {
-            _isSprinting= true;
-        }
-        else { _isSprinting = false; }
-    }
-
     private void Move()
     {
-        if (_isSprinting)
-        {
             var targetVelocity = _input * speed;
             _rigidBody.velocity = Vector2.Lerp(_rigidBody.velocity, targetVelocity, _smoothing); //opcionalment a transform.translate?
-        }                                                                                 //Bona idea amb el Lerp fa una trancisió entre la velocitat desitjada    
-        else
-        {
-            var targetVelocity = _input * (speed - walking);
-            _rigidBody.velocity = Vector2.Lerp(_rigidBody.velocity, targetVelocity, _smoothing);
-        }
+                                                                                                //Bona idea amb el Lerp fa una trancisió entre la velocitat desitjada    
     }
     private void MoveByFoce()
-    {
-        if (_isSprinting)
-        {
+    {       
             _rigidBody.AddForce(_input * _force, ForceMode2D.Force);
-            var force = _input * _force * Time.deltaTime;
-        }
-        else
-        {
-            _rigidBody.AddForce(_input * (_force - walking), ForceMode2D.Force);
-            var force = _input * _force * Time.deltaTime;
-        }
+            var force = _input * _force * Time.deltaTime;     
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IncreaseSpeed();
-        if (collision.gameObject.tag == "PowerUp")
+        SpeedPowerUp speedUp = collision.GetComponent<SpeedPowerUp>();
+        if (speedUp != null)
         {
+            IncreaseSpeed();
             Destroy(collision.gameObject);
         }
         //SpeedIncrease??
