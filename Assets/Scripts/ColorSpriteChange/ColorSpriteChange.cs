@@ -44,7 +44,7 @@ public class ColorSpriteChange : MonoBehaviour
                 m_Value = 1;
             }
 
-            m_Intensity = Random.Range(0.5f, 2f);
+            m_Intensity = Random.Range(0f, 2f);
             _objectLight.intensity = m_Intensity;
 
             // Cambia el color del objeto
