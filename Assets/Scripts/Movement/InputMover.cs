@@ -36,7 +36,7 @@ public class InputMover : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        player= GetComponent<GameObject>();
+        //player= GetComponent<GameObject>();
         _rigidBody= GetComponent<Rigidbody2D>();
         _dash = GetComponent<Dash>();
     }

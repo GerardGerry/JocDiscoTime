@@ -20,7 +20,6 @@ public class ColorSpriteChange : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _objectLight = GetComponentInChildren<UnityEngine.Rendering.Universal.Light2D>();
-        Debug.Log(_objectLight);
 
         StartCoroutine(ChangeColor());
     }

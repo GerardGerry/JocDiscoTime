@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnPlayerDash()
     {
-        _inputMover.OnMove();
-        _dash.MakeDash();
+        
+        _dash.MakeDash(_input);
     }
 }

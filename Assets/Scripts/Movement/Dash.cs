@@ -17,6 +17,7 @@ public class Dash : MonoBehaviour
     [SerializeField] private float _dashingCooldown = 1f;
 
     float timer = 0f;
+    bool canDash = true;
 
     // Start is called before the first frame update
     void Awake()
@@ -28,22 +29,23 @@ public class Dash : MonoBehaviour
     {
 
         timer = timer + Time.deltaTime;
-        MakeDash();
-
+        if (canDash == true)
+        {
+            MakeDash(_input);
+            canDash = false;
+        }
     }
 
-    public void SetInput(InputValue value)
-    {
-        _input = value.Get<Vector2>();
-    }
-
-    public void MakeDash()
+    public void MakeDash(Vector2 input)
     {
         if(timer >= _dashingCooldown)
         {
-            Vector2 playerDash = new Vector2(_input.x * _dashingPower, _input.y * _dashingPower);
+            //Vector2 playerDash = new Vector2(_input.x * _dashingPower, _input.y * _dashingPower);
+            Vector2 playerDash = input.normalized * _dashingPower;
+            Debug.Log(playerDash);
             _rigidBody.velocity = playerDash;
             timer = 0;
+            canDash = true;
         }
 
     }
