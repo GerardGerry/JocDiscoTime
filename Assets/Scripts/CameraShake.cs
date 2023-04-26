@@ -16,6 +16,17 @@ public class CameraShake : MonoBehaviour
 
     private void Update()
     {
+
+    }
+
+    public void ShakeCamera(float duration, float magnitude)
+    {
+        shakeDuration = duration;
+        shakeMagnitude = magnitude;
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
         if (shakeDuration > 0)
         {
             transform.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
@@ -29,11 +40,5 @@ public class CameraShake : MonoBehaviour
             shakeDuration = 0f;
             transform.localPosition = initialPosition;
         }
-    }
-
-    public void ShakeCamera(float duration, float magnitude)
-    {
-        shakeDuration = duration;
-        shakeMagnitude = magnitude;
     }
 }
