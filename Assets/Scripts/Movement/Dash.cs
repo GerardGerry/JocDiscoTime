@@ -7,7 +7,7 @@ using UnityEngine.Windows;
 
 public class Dash : MonoBehaviour
 {
-    private Rigidbody2D _rigidBody; 
+    private Rigidbody2D _rigidBody;
     Vector2 _input;
 
     //[Header("Dash")]
@@ -16,32 +16,40 @@ public class Dash : MonoBehaviour
     [SerializeField] private float _timeCanDash = 1f;
     [SerializeField] private float _dashingCooldown = 1f;
 
-    private bool canDash = true;
-    
+    float timer = 0f;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
+        timer = timer + Time.deltaTime;
+        MakeDash();
+
     }
-    private void OnMove(InputValue value)
+
+    public void SetInput(InputValue value)
     {
         _input = value.Get<Vector2>();
     }
-    private void OnPlayerDash()
+
+    public void MakeDash()
+    {
+        if(timer >= _dashingCooldown)
+        {
+            Vector2 playerDash = new Vector2(_input.x * _dashingPower, _input.y * _dashingPower);
+            _rigidBody.velocity = playerDash;
+            timer = 0;
+        }
+
+    }
+
+    /*private void OnPlayerDash()
     {
         if(canDash) { StartCoroutine(PlayerDash()); }    
-    }
-    private IEnumerator PlayerDash()
-    {
-        canDash = false;
-        Vector2 playerDash = new Vector2(_input.x * _dashingPower, _input.y * _dashingPower);
-        _rigidBody.velocity = playerDash;
-        yield return new WaitForSeconds(_dashingCooldown);
-        canDash = true;
-    }
+    }*/
 }

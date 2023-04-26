@@ -8,6 +8,7 @@ using static UnityEngine.GraphicsBuffer;
 public class InputMover : MonoBehaviour
 {
     Rigidbody2D _rigidBody;
+    Dash _dash;
     private GameObject player;
 
     Vector2 _input;
@@ -33,17 +34,13 @@ public class InputMover : MonoBehaviour
     private float speed;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         player= GetComponent<GameObject>();
         _rigidBody= GetComponent<Rigidbody2D>();
+        _dash = GetComponent<Dash>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-            
-    }
     private void FixedUpdate()
     {
         if (controlType == ControlType.Force)
@@ -55,11 +52,12 @@ public class InputMover : MonoBehaviour
             Move();         
         }
     }
-    private void OnMove(InputValue value)
+    public void SetInput(InputValue value)
     {
         _input = value.Get<Vector2>();
     }
-    private void Move()
+
+    public void Move()
     {
             var targetVelocity = _input * speed;
             _rigidBody.velocity = Vector2.Lerp(_rigidBody.velocity, targetVelocity, _smoothing); //opcionalment a transform.translate?
@@ -70,4 +68,6 @@ public class InputMover : MonoBehaviour
             _rigidBody.AddForce(_input * _force, ForceMode2D.Force);
             var force = _input * _force * Time.deltaTime;     
     }
+
+
 }
