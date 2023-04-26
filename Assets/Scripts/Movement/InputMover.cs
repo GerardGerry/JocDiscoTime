@@ -27,7 +27,7 @@ public class InputMover : MonoBehaviour
     private float _smoothing;
    
     [SerializeField]
-    float _force;
+    private float _force;
 
     [SerializeField]
     private float speed;
@@ -70,35 +70,4 @@ public class InputMover : MonoBehaviour
             _rigidBody.AddForce(_input * _force, ForceMode2D.Force);
             var force = _input * _force * Time.deltaTime;     
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        SpeedPowerUp speedUp = collision.GetComponent<SpeedPowerUp>();
-        if (speedUp != null)
-        {
-            IncreaseSpeed();
-            Destroy(collision.gameObject);
-        }
-        //SpeedIncrease??
-    }
-    public void IncreaseSpeed()
-    {      
-        speed += 30f;
-        _force += 30f;
-        Debug.Log("Increased");
-        Invoke("DecreaseSpeed", 5f);       
-    }
-    private void DecreaseSpeed()
-    {
-        Debug.Log("Decreased");
-        speed-= 30f;
-        _force-= 30f;
-    }
-
-    private void Temblar()
-    {
-        //StartCoroutine(MyObject.GetComponent<ShakeScript>().Shake(1f, 5f));
-        //CameraShake.Shake
-        Debug.Log("Shaked");     
-    }
-
 }
