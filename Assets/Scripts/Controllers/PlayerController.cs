@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
         _animator.SetBool("MovingRight", _input.x > 0);
         _animator.SetBool("MovingUp", _input.y > 0);
         _animator.SetBool("MovingDown", _input.y < 0);
+        _animator.SetBool("MovingDownLeft", _input.y < 0 && _input.x < 0);
     }
 
     private void OnPlayerDash()

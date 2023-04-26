@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    public float shakeDuration = 0f;
+    public float shakeDuration = 1f;
     public float shakeMagnitude = 0.7f;
 
     private Vector3 initialPosition;
@@ -16,7 +17,19 @@ public class CameraShake : MonoBehaviour
 
     private void Update()
     {
+        if (shakeDuration > 0)
+        {
+            transform.localPosition = initialPosition + UnityEngine.Random.insideUnitSphere * shakeMagnitude;
 
+            shakeDuration -= Time.deltaTime;
+
+
+        }
+        else
+        {
+            shakeDuration = 0f;
+            transform.localPosition = initialPosition;
+        }
     }
 
     public void ShakeCamera(float duration, float magnitude)
@@ -25,7 +38,7 @@ public class CameraShake : MonoBehaviour
         shakeMagnitude = magnitude;
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    /*public void OnCollisionEnter2D(Collision2D collision)
     {
         if (shakeDuration > 0)
         {
@@ -40,5 +53,5 @@ public class CameraShake : MonoBehaviour
             shakeDuration = 0f;
             transform.localPosition = initialPosition;
         }
-    }
+    }*/
 }
