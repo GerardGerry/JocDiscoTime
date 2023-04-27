@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         _inputMover.SetInput(value);
         _input = value.Get<Vector2>();
+        Debug.Log(_inputMover);
 
 
     }
