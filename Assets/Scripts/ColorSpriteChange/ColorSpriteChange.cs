@@ -14,45 +14,64 @@ public class ColorSpriteChange : MonoBehaviour
     float m_Saturation = 1;
     float m_Value = 1f;
     float m_Intensity = 1f;
+    float timer;
+
+    Color newColor;
 
     // Start is called before the first frame update
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _objectLight = GetComponentInChildren<UnityEngine.Rendering.Universal.Light2D>();
-
-        StartCoroutine(ChangeColor());
     }
 
-    IEnumerator ChangeColor()
+    private void Update()
     {
-        while (true)
+        timer = timer + Time.deltaTime;
+        ColorChange();
+
+    }
+
+    private void ColorChange()
+    {
+        if (timer >= interval)
         {
-            randomNumber = Random.value;
-            m_Hue = randomNumber;
-            randomNumber = Random.value;
-            m_Value = Random.Range(0, 1);
-
-            if (randomNumber == 0)
-            {
-                m_Saturation = 0.5f;
-                m_Value = 0.2f;
-            }
-            else
-            {
-                m_Value = 1;
-            }
-
-            m_Intensity = Random.Range(0f, 2f);
-            _objectLight.intensity = m_Intensity;
-
-            // Cambia el color del objeto
-            Color newColor = Color.HSVToRGB(m_Hue, m_Saturation, m_Value);
-            _spriteRenderer.material.color = newColor;
-            _objectLight.color = newColor;
-
-            yield return new WaitForSeconds(interval);
+            MaterialChange();
+            LightChange();
+            timer = 0;
         }
+
+    }
+
+    private void MaterialChange()
+    {
+        randomNumber = UnityEngine.Random.value;
+        m_Hue = randomNumber;
+        randomNumber = UnityEngine.Random.value;
+        m_Value = UnityEngine.Random.Range(0, 1);
+
+        if (randomNumber == 0)
+        {
+            m_Saturation = 0.5f;
+            m_Value = 0.2f;
+        }
+        else
+        {
+            m_Value = 1;
+        }
+
+        newColor = Color.HSVToRGB(m_Hue, m_Saturation, m_Value);
+        _spriteRenderer.material.color = newColor;
+    }
+
+    private void LightChange()
+    {
+        m_Intensity = UnityEngine.Random.Range(0f, 2f);
+        _objectLight.intensity = m_Intensity;
+
+        // Cambia el color del objeto
+
+        _objectLight.color = newColor;
     }
 
 }
