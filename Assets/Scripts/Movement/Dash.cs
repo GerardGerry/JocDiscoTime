@@ -11,9 +11,7 @@ public class Dash : MonoBehaviour
     Vector2 _input;
 
     //[Header("Dash")]
-    [SerializeField] private float _dashingTime = 0.2f;
     [SerializeField] private float _dashingPower = 20f;
-    [SerializeField] private float _timeCanDash = 1f;
     [SerializeField] private float _dashingCooldown = 1f;
 
     float timer = 0f;

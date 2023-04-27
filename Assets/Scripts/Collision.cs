@@ -7,7 +7,7 @@ public class Collision : MonoBehaviour
     public CameraShake shaker;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        shaker.ShakeCamera(1,1);
+        shaker.ShakeCamera(0.1f,0.1f);
     }
     // Start is called before the first frame update
     void Start()
