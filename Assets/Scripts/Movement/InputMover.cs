@@ -9,7 +9,7 @@ public class InputMover : MonoBehaviour
 {
     Rigidbody2D _rigidBody;
     Dash _dash;
-    private GameObject player;
+    DestroyedCollider _destroyedCollider;
 
     Vector2 _input;
 
@@ -36,7 +36,6 @@ public class InputMover : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //player= GetComponent<GameObject>();
         _rigidBody= GetComponent<Rigidbody2D>();
         _dash = GetComponent<Dash>();
     }
@@ -69,5 +68,14 @@ public class InputMover : MonoBehaviour
             var force = _input * _force * Time.deltaTime;     
     }
 
-
+    public void SpeedBoot(float speedUp)
+    {
+        Debug.Log("Fiaum");
+        speed += speedUp;
+        _force += speedUp;
+    }
+    private void SendData()
+    {
+        _destroyedCollider.PlayerData(_force, _input);
+    }
 }

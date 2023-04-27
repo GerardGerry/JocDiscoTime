@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class SpeedPowerUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void IncreaseSpeed(bool activated, InputMover _inputMover)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+       if (activated)
+        {
+            Destroy(this.gameObject);
+            Debug.Log(_inputMover);
+            _inputMover.SpeedBoot(20f);            
+        }       
+    }   
 }
