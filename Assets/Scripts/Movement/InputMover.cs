@@ -9,6 +9,7 @@ public class InputMover : MonoBehaviour
 {
     Rigidbody2D _rigidBody;
     Dash _dash;
+    Animator _animator;
     private GameObject player;
 
     Vector2 _input;
@@ -26,7 +27,7 @@ public class InputMover : MonoBehaviour
     [SerializeField]
     [Range(0, 1)]
     private float _smoothing;
-   
+
     [SerializeField]
     private float _force;
 
@@ -36,8 +37,8 @@ public class InputMover : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //player= GetComponent<GameObject>();
-        _rigidBody= GetComponent<Rigidbody2D>();
+        _animator = GetComponentInChildren<Animator>();
+        _rigidBody = GetComponent<Rigidbody2D>();
         _dash = GetComponent<Dash>();
     }
 
@@ -45,28 +46,43 @@ public class InputMover : MonoBehaviour
     {
         if (controlType == ControlType.Force)
         {
-            MoveByFoce();           
+            MoveByFoce();
         }
         if (controlType == ControlType.Speed)
         {
-            Move();         
+            Move();
         }
     }
+
     public void SetInput(InputValue value)
     {
+
         _input = value.Get<Vector2>();
+
     }
 
     public void Move()
     {
-            var targetVelocity = _input * speed;
-            _rigidBody.velocity = Vector2.Lerp(_rigidBody.velocity, targetVelocity, _smoothing); //opcionalment a transform.translate?
-                                                                                                //Bona idea amb el Lerp fa una trancisió entre la velocitat desitjada    
+
+        var targetVelocity = _input * speed;
+        _rigidBody.velocity = Vector2.Lerp(_rigidBody.velocity, targetVelocity, _smoothing);
+        _animator.SetBool("MovingLeft", _input.x < 0);
+        _animator.SetBool("MovingRight", _input.x > 0);
+        _animator.SetBool("MovingUp", _input.y > 0);
+        _animator.SetBool("MovingDown", _input.y < 0);
+        _animator.SetBool("MovingDownLeft", _input.y < 0 && _input.x < 0);
+
     }
+
     private void MoveByFoce()
-    {       
-            _rigidBody.AddForce(_input * _force, ForceMode2D.Force);
-            var force = _input * _force * Time.deltaTime;     
+    {
+        _rigidBody.AddForce(_input * _force, ForceMode2D.Force);
+        var force = _input * _force * Time.deltaTime;
+        _animator.SetBool("MovingLeft", _input.x < 0);
+        _animator.SetBool("MovingRight", _input.x > 0);
+        _animator.SetBool("MovingUp", _input.y > 0);
+        _animator.SetBool("MovingDown", _input.y < 0);
+        _animator.SetBool("MovingDownLeft", _input.y < 0 && _input.x < 0);
     }
 
 

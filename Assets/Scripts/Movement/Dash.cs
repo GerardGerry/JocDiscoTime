@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
@@ -8,6 +9,7 @@ using UnityEngine.Windows;
 public class Dash : MonoBehaviour
 {
     private Rigidbody2D _rigidBody;
+    Animator _animator;
     Vector2 _input;
 
     //[Header("Dash")]
@@ -21,6 +23,7 @@ public class Dash : MonoBehaviour
     void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
+        _animator = GetComponentInChildren<Animator>();
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -36,15 +39,22 @@ public class Dash : MonoBehaviour
 
     public void MakeDash(Vector2 input)
     {
-        if(timer >= _dashingCooldown)
+        if (timer >= _dashingCooldown)
         {
-            //Vector2 playerDash = new Vector2(_input.x * _dashingPower, _input.y * _dashingPower);
+            if(input.x > 0)
+            {
+                _animator.SetBool("RollRight", true);
+            }
+
+            UnityEngine.Debug.Log("Animation");
+
             Vector2 playerDash = input.normalized * _dashingPower;
-            Debug.Log(playerDash);
             _rigidBody.velocity = playerDash;
+            _animator.SetBool("RollRight", false);
             timer = 0;
             canDash = true;
         }
+
 
     }
 

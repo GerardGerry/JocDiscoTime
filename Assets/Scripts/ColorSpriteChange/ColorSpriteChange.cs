@@ -66,7 +66,7 @@ public class ColorSpriteChange : MonoBehaviour
 
     private void LightChange()
     {
-        m_Intensity = UnityEngine.Random.Range(0f, 2f);
+        m_Intensity = UnityEngine.Random.Range(0f, 1f);
         _objectLight.intensity = m_Intensity;
 
         // Cambia el color del objeto
