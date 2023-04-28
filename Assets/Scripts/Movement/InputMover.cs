@@ -52,6 +52,8 @@ public class InputMover : MonoBehaviour
         {
             Move();
         }
+        Debug.Log(_input.x + "x");
+        Debug.Log(_input.y + "y");
     }
 
     public void SetInput(InputValue value)

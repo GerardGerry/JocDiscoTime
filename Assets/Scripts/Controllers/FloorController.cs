@@ -1,14 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorSpriteChange : MonoBehaviour
+public class FloorController : MonoBehaviour
 {
+    public GameObject[] discoFloor;
+    ColorSpriteChange _colorSpriteChange;
     SpriteRenderer _spriteRenderer;
     UnityEngine.Rendering.Universal.Light2D _objectLight;
 
-    [SerializeField]
-    float interval = 0.1f;
     float randomNumber;
     float m_Hue;
     float m_Saturation = 1;
@@ -18,31 +19,44 @@ public class ColorSpriteChange : MonoBehaviour
 
     Color newColor;
 
-     //Start is called before the first frame update
-    void Start()
-    {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        _objectLight = GetComponentInChildren<UnityEngine.Rendering.Universal.Light2D>();
-        Debug.Log("Suelo de luz");
-    }
+    [SerializeField]
+    float interval = 3f;
 
-    private void Update()
+    // Start is called before the first frame update
+    void Awake()
     {
-        timer = timer + Time.deltaTime;
-        ColorChange();
+        _colorSpriteChange = GetComponent<ColorSpriteChange>();
 
     }
 
-    private void ColorChange()
+    // Update is called once per frame
+    void FixedUpdate()
     {
-        if (timer >= interval)
+        timer += Time.deltaTime;
+        if(timer >= interval)
         {
-            MaterialChange();
-            LightChange();
-            timer = 0;
+            ChangeGlobalColor();
         }
-        
+   
+    }
 
+    private void ChangeGlobalColor()
+    {
+        for (int i = 0; i < discoFloor.Length; i++)
+        {
+            ColorChange(i);
+        }
+        timer = 0;
+    }
+
+    public void ColorChange(int x)
+    {
+       
+        _spriteRenderer = discoFloor[x].GetComponent<SpriteRenderer>();
+        _objectLight = discoFloor[x].GetComponentInChildren<UnityEngine.Rendering.Universal.Light2D>();
+
+        MaterialChange();
+        LightChange();
     }
 
     private void MaterialChange()
@@ -75,5 +89,4 @@ public class ColorSpriteChange : MonoBehaviour
 
         _objectLight.color = newColor;
     }
-
 }

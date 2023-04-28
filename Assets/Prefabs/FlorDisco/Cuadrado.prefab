@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 659226960416021237}
   - component: {fileID: 659226960416021236}
-  - component: {fileID: 659226960416021238}
-  - component: {fileID: 3696976877394577499}
+  - component: {fileID: 7834855993128160899}
+  - component: {fileID: 711285854611455174}
   m_Layer: 0
   m_Name: Cuadrado
   m_TagString: Untagged
@@ -87,27 +87,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &659226960416021238
+--- !u!114 &7834855993128160899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659226960416021243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 489012c71d494ca49970c32761206215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 0.1
---- !u!114 &3696976877394577499
+--- !u!114 &711285854611455174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659226960416021243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf3f1b1ec8d932a428622682b36dd084, type: 3}
   m_Name: 
