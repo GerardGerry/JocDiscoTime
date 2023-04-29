@@ -43,4 +43,14 @@ public class PlayerController : MonoBehaviour
         _dash.MakeDash(_input);
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        SpeedPowerUp speedUp = collision.GetComponent<SpeedPowerUp>();
+        if (speedUp != null)
+        {
+            speedUp.IncreaseSpeed(true, _inputMover);
+            Debug.Log("Destroyed");
+        }
+    }
 }

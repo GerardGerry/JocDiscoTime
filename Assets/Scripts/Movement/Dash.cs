@@ -12,7 +12,6 @@ public class Dash : MonoBehaviour
     Animator _animator;
     Vector2 _input;
 
-    //[Header("Dash")]
     [SerializeField] private float _dashingPower = 20f;
     [SerializeField] private float _dashingCooldown = 1f;
 
@@ -54,12 +53,5 @@ public class Dash : MonoBehaviour
             timer = 0;
             canDash = true;
         }
-
-
     }
-
-    /*private void OnPlayerDash()
-    {
-        if(canDash) { StartCoroutine(PlayerDash()); }    
-    }*/
 }
