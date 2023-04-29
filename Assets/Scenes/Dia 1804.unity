@@ -17837,7 +17837,6 @@ GameObject:
   - component: {fileID: 707169938}
   - component: {fileID: 707169940}
   - component: {fileID: 707169941}
-  - component: {fileID: 707169939}
   m_Layer: 0
   m_Name: Pared_Derecha
   m_TagString: Untagged
@@ -17860,19 +17859,6 @@ Transform:
   m_Father: {fileID: 949861311}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &707169939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707169937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d84ae2133a92842871a80f12e35a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shaker: {fileID: 2078077337}
 --- !u!212 &707169940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19404,7 +19390,6 @@ GameObject:
   - component: {fileID: 879474146}
   - component: {fileID: 879474148}
   - component: {fileID: 879474149}
-  - component: {fileID: 879474147}
   m_Layer: 0
   m_Name: Pared_Arriba
   m_TagString: Untagged
@@ -19427,19 +19412,6 @@ Transform:
   m_Father: {fileID: 949861311}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &879474147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879474145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d84ae2133a92842871a80f12e35a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shaker: {fileID: 2078077337}
 --- !u!212 &879474148
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20896,6 +20868,7 @@ GameObject:
   - component: {fileID: 1026298707}
   - component: {fileID: 1026298710}
   - component: {fileID: 1026298709}
+  - component: {fileID: 1026298711}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -21103,6 +21076,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a770a2b44779ee943b83bcc9eaf6c94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1026298711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026298699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d84ae2133a92842871a80f12e35a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaker: {fileID: 2078077337}
 --- !u!1 &1032457569 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 659226960416021243, guid: 5164636100236024291d22e8c20db15d, type: 3}
@@ -23164,7 +23150,6 @@ GameObject:
   - component: {fileID: 1175887048}
   - component: {fileID: 1175887050}
   - component: {fileID: 1175887051}
-  - component: {fileID: 1175887049}
   m_Layer: 0
   m_Name: Pared_Abajo
   m_TagString: Untagged
@@ -23187,19 +23172,6 @@ Transform:
   m_Father: {fileID: 949861311}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1175887049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1175887047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d84ae2133a92842871a80f12e35a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shaker: {fileID: 2078077337}
 --- !u!212 &1175887050
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23969,7 +23941,6 @@ GameObject:
   - component: {fileID: 1243604639}
   - component: {fileID: 1243604641}
   - component: {fileID: 1243604642}
-  - component: {fileID: 1243604640}
   m_Layer: 0
   m_Name: Pared_Izquierda
   m_TagString: Untagged
@@ -23992,19 +23963,6 @@ Transform:
   m_Father: {fileID: 949861311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1243604640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1243604638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d84ae2133a92842871a80f12e35a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shaker: {fileID: 2078077337}
 --- !u!212 &1243604641
 SpriteRenderer:
   m_ObjectHideFlags: 0
