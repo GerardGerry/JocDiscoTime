@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     Dash _dash;
     Animator _animator;
     Vector2 _input;
+    
 
     private void Awake()
     {
@@ -54,4 +55,5 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Destroyed");
         }
     }
+    
 }
