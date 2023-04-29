@@ -9,7 +9,7 @@ public class InputMover : MonoBehaviour
 {
     Rigidbody2D _rigidBody;
     Dash _dash;
-    Animator _animator;
+    DestroyedCollider _destroyedCollider;
     private GameObject player;
 
     Vector2 _input;
@@ -36,8 +36,7 @@ public class InputMover : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake()
-    {
-        _animator = GetComponentInChildren<Animator>();
+    {       
         _rigidBody = GetComponent<Rigidbody2D>();
         _dash = GetComponent<Dash>();
     }
@@ -52,8 +51,6 @@ public class InputMover : MonoBehaviour
         {
             Move();
         }
-        Debug.Log(_input.x + "x");
-        Debug.Log(_input.y + "y");
     }
 
     public void SetInput(InputValue value)
@@ -68,11 +65,7 @@ public class InputMover : MonoBehaviour
 
         var targetVelocity = _input * speed;
         _rigidBody.velocity = Vector2.Lerp(_rigidBody.velocity, targetVelocity, _smoothing);
-        _animator.SetBool("MovingLeft", _input.x < 0);
-        _animator.SetBool("MovingRight", _input.x > 0);
-        _animator.SetBool("MovingUp", _input.y > 0);
-        _animator.SetBool("MovingDown", _input.y < 0);
-        _animator.SetBool("MovingDownLeft", _input.y < 0 && _input.x < 0);
+
 
     }
 
@@ -80,12 +73,17 @@ public class InputMover : MonoBehaviour
     {
         _rigidBody.AddForce(_input * _force, ForceMode2D.Force);
         var force = _input * _force * Time.deltaTime;
-        _animator.SetBool("MovingLeft", _input.x < 0);
-        _animator.SetBool("MovingRight", _input.x > 0);
-        _animator.SetBool("MovingUp", _input.y > 0);
-        _animator.SetBool("MovingDown", _input.y < 0);
-        _animator.SetBool("MovingDownLeft", _input.y < 0 && _input.x < 0);
     }
 
+    public void SpeedBoot(float speedUp)
+    {
+        Debug.Log("Fiaum");
+        speed += speedUp;
+        _force += speedUp;
+    }
+    private void SendData()
+    {
+        _destroyedCollider.PlayerData(_force, _input);
+    }
 
 }
