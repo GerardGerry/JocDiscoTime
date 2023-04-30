@@ -1,47 +1,57 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
 
 public class Dash : MonoBehaviour
 {
-    private Rigidbody2D _rigidBody; 
+    private Rigidbody2D _rigidBody;
+    Animator _animator;
     Vector2 _input;
 
-    //[Header("Dash")]
-    [SerializeField] private float _dashingTime = 0.2f;
     [SerializeField] private float _dashingPower = 20f;
-    [SerializeField] private float _timeCanDash = 1f;
     [SerializeField] private float _dashingCooldown = 1f;
 
-    private bool canDash = true;
-    
+    float timer = 0f;
+    bool canDash = true;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
+        _animator = GetComponentInChildren<Animator>();
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
+        timer = timer + Time.deltaTime;
+        if (canDash == true)
+        {
+            MakeDash(_input);
+            canDash = false;
+        }
     }
-    private void OnMove(InputValue value)
+
+    public void MakeDash(Vector2 input)
     {
-        _input = value.Get<Vector2>();
-    }
-    private void OnPlayerDash()
-    {
-        if(canDash) { StartCoroutine(PlayerDash()); }    
-    }
-    private IEnumerator PlayerDash()
-    {
-        canDash = false;
-        Vector2 playerDash = new Vector2(_input.x * _dashingPower, _input.y * _dashingPower);
-        _rigidBody.velocity = playerDash;
-        yield return new WaitForSeconds(_dashingCooldown);
-        canDash = true;
+        if (timer >= _dashingCooldown)
+        {
+            if(input.x > 0)
+            {
+                _animator.SetBool("RollRight", true);
+            }
+
+            UnityEngine.Debug.Log("Animation");
+
+            Vector2 playerDash = input.normalized * _dashingPower;
+            _rigidBody.velocity = playerDash;
+            _animator.SetBool("RollRight", false);
+            timer = 0;
+            canDash = true;
+        }
     }
 }

@@ -21,6 +21,7 @@ public class CameraFollower2 : MonoBehaviour
     void FixedUpdate()
     {
         SmoothFollow();
+        
     }
 
     void SmoothFollow()
