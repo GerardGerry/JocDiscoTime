@@ -27,7 +27,15 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        timer = timer + Time.deltaTime;
+        if(timer < _dashingCooldown)
+        {
+            timer = timer + Time.deltaTime;
+        }      
+        if (timer >= _dashingCooldown)
+        {
+            timer = 0;
+            canDash = true;
+        }
     }
 
     public void MakeDash(Vector2 input)
@@ -41,10 +49,6 @@ public class Dash : MonoBehaviour
             Vector2 playerDash = input.normalized * _dashingPower;
             _rigidBody.velocity = playerDash;
         }      
-        if (timer >= _dashingCooldown)
-        {    
-            timer = 0;
-            canDash = true;   
-        }
+        
     }
 }

@@ -55,20 +55,14 @@ public class InputMover : MonoBehaviour
 
     public void SetInput(InputValue value)
     {
-
         _input = value.Get<Vector2>();
-
     }
 
     public void Move()
     {
-
         var targetVelocity = _input * speed;
         _rigidBody.velocity = Vector2.Lerp(_rigidBody.velocity, targetVelocity, _smoothing);
-
-
     }
-
     private void MoveByFoce()
     {
         _rigidBody.AddForce(_input * _force, ForceMode2D.Force);

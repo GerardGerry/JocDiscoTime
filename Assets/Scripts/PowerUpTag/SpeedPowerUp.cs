@@ -10,7 +10,7 @@ public class SpeedPowerUp : MonoBehaviour
         {
             Destroy(this.gameObject);
             Debug.Log(_inputMover);
-            _inputMover.SpeedBoot(20f);            
+            _inputMover.SpeedBoot(10f);            
         }       
     }   
 }

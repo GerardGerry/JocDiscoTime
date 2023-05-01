@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
         _inputMover = GetComponent<InputMover>();
         _dash = GetComponent<Dash>();
     }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -34,23 +33,16 @@ public class PlayerController : MonoBehaviour
     {
         _inputMover.SetInput(value);
         _input = value.Get<Vector2>();
-        _animator.SetBool("MovingLeft", _input.x < 0);
-        _animator.SetBool("MovingRight", _input.x > 0);
-        _animator.SetBool("MovingUp", _input.y > 0);
-        _animator.SetBool("MovingDown", _input.y < 0);
-        _animator.SetBool("MovingDownLeft", _input.y < 0 && _input.x < 0);
-
-
+        float moveX = _input.x;
+        float moveY = _input.y;
+        _animator.SetFloat("Horizontal", moveX);
+        _animator.SetFloat("Vertical", moveY);
+        _animator.SetFloat("Speed", _input.SqrMagnitude());
     }
-
     private void OnPlayerDash()
     {
-       
         _dash.MakeDash(_input);
-        
-
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         SpeedPowerUp speedUp = collision.GetComponent<SpeedPowerUp>();
