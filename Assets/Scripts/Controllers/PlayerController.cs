@@ -45,7 +45,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnPlayerDash()
     {
+       
         _dash.MakeDash(_input);
+        
 
     }
 

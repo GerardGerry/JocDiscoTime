@@ -27,31 +27,24 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
         timer = timer + Time.deltaTime;
-        if (canDash == true)
-        {
-            MakeDash(_input);
-            canDash = false;
-        }
     }
 
     public void MakeDash(Vector2 input)
     {
-        if (timer >= _dashingCooldown)
+        if(canDash)
         {
-            if(input.x > 0)
-            {
-                _animator.SetBool("RollRight", true);
-            }
+            canDash = false;
+            _animator.SetTrigger("Roll");
 
             UnityEngine.Debug.Log("Animation");
-
             Vector2 playerDash = input.normalized * _dashingPower;
             _rigidBody.velocity = playerDash;
-            _animator.SetBool("RollRight", false);
+        }      
+        if (timer >= _dashingCooldown)
+        {    
             timer = 0;
-            canDash = true;
+            canDash = true;   
         }
     }
 }
