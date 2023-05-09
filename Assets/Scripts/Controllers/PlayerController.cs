@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     InputMover _inputMover;
     Dash _dash;
     Animator _animator;
+    PlayerShoot _playerShoot;
+    WeaponPivotController _weaponPivotController;
 
     Vector2 _input;
 
@@ -17,21 +19,14 @@ public class PlayerController : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _inputMover = GetComponent<InputMover>();
         _dash = GetComponent<Dash>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        _weaponPivotController = GetComponentInChildren<WeaponPivotController>();
+        _playerShoot = GetComponentInChildren<PlayerShoot>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnMove(InputValue value)
     {
         _inputMover.SetInput(value);
+        _weaponPivotController.SetInput(value);
         _input = value.Get<Vector2>();
         float moveX = _input.x;
         float moveY = _input.y;
@@ -43,6 +38,7 @@ public class PlayerController : MonoBehaviour
     {
         _dash.MakeDash(_input);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         SpeedPowerUp speedUp = collision.GetComponent<SpeedPowerUp>();
@@ -51,5 +47,10 @@ public class PlayerController : MonoBehaviour
             speedUp.IncreaseSpeed(true, _inputMover);
             Debug.Log("Destroyed");
         }
+    }
+
+    private void OnPlayerShoot()
+    {
+        _playerShoot.ShootBullet(_input);
     }
 }
