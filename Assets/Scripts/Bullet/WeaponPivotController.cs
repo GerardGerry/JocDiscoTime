@@ -9,19 +9,25 @@ public class WeaponPivotController : MonoBehaviour
     float _angle;
     Vector2 _input;
 
-    /*private void Update()
+    private void Update()
     {
         PivotRotate();
-    }*/
+    }
 
     public void SetInput(InputValue value)
     {
         _input = value.Get<Vector2>();
     }
 
-    /*void PivotRotate()
+    void PivotRotate()
     {
+        Transform transform = GetComponent<Transform>();
         _angle = Vector2.Angle(Vector2.right, _input);
-        transform.rotation(_angle);
-    }*/
+        if(_input.y <= 0)
+        {
+            _angle = 360 - _angle;
+        }
+
+        transform.localEulerAngles = new Vector3(0,0,_angle);
+    }
 }

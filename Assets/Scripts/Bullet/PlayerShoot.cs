@@ -10,7 +10,6 @@ public class PlayerShoot : MonoBehaviour
     public void ShootBullet(Vector2 input)
     {
         bullet = Instantiate(bullet, transform.position, transform.rotation);
-        bullet.transform.SetParent(transform);
     }
 
 
