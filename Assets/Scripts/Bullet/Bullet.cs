@@ -18,9 +18,8 @@ public class Bullet : MonoBehaviour
         _rigidbody.velocity = transform.right * speed;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        Destroy(gameObject);
     }
 }

@@ -13,6 +13,7 @@ public class InputMover : MonoBehaviour
     private GameObject player;
 
     Vector2 _input;
+    Vector2 lastPosition;
 
     CameraShake _cameraShake;
 

@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         _animator.SetFloat("Vertical", moveY);
         _animator.SetFloat("Speed", _input.SqrMagnitude());
     }
+
     private void OnPlayerDash()
     {
         _dash.MakeDash(_input);

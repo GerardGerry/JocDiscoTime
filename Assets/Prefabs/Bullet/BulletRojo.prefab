@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1777539388987282006}
   - component: {fileID: 1777539388987282001}
   - component: {fileID: 1777539388987282000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 3859749092109655896}
   - component: {fileID: 9042948961336833666}
   - component: {fileID: 8824188780105848171}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletRojo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -3278,7 +3278,6 @@ GameObject:
   - component: {fileID: 392820728}
   - component: {fileID: 392820727}
   - component: {fileID: 392820726}
-  - component: {fileID: 392820729}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -3379,19 +3378,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &392820729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392820725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d84ae2133a92842871a80f12e35a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shaker: {fileID: 2078077337}
 --- !u!1001 &401256003
 PrefabInstance:
   m_ObjectHideFlags: 0
