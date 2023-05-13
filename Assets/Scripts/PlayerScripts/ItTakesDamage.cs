@@ -4,8 +4,7 @@ using UnityEngine;
 
 public interface ItTakesDamage 
 {
-    public interface ITakeDamage
-    {
+    
         void TakeDamage(float amount);
-    }
+   
 }
