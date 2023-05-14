@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody;
-    [SerializeField]
-    private float speed = 20;
-    void Start()
+    public float velocidad = 10f; // Velocidad de la bala
+    public float tiempoDeVida = 2f; // Cuánto tiempo (en segundos) debe vivir la bala antes de destruirse
+    public int daño = 1; // Cantidad de daño que hace la bala
+
+    private void Start()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
-        SetVelocity();
+        // Destruir la bala después de 'tiempoDeVida' segundos
+        Destroy(gameObject, tiempoDeVida);
     }
 
-    private void SetVelocity()
+    private void Update()
     {
-        _rigidbody.velocity = transform.right * speed;
+        // Mover la bala hacia adelante
+        transform.Translate(Vector2.right * velocidad * Time.deltaTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        // Obtener una referencia al objeto que se ha colisionado
+        GameObject objetoColisionado = other.gameObject;
+
+        // Si el objeto colisionado tiene un componente 'Enemigo', infligir daño
+        /*Enemigo enemigo = objetoColisionado.GetComponent<Enemigo>();
+        if (enemigo != null)
+        {
+            enemigo.RecibirDanio(daño);
+        }*/
+
+        // Destruir la bala
         Destroy(gameObject);
     }
 }

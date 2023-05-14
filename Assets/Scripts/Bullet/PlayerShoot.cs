@@ -7,14 +7,9 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     GameObject bullet;
 
-    public void ShootBullet(Vector2 input)
+    public void ShootBullet()
     {
         GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

@@ -196,7 +196,7 @@ TrailRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 2
+    textureMode: 0
     shadowBias: 0
     generateLightingData: 0
   m_MinVertexDistance: 0
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 1777539390841673219}
   - component: {fileID: 3859749092109655896}
   - component: {fileID: 9042948961336833666}
-  - component: {fileID: 8824188780105848171}
+  - component: {fileID: 615185642732755935}
   m_Layer: 8
   m_Name: BulletRojo
   m_TagString: Untagged
@@ -274,7 +274,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &8824188780105848171
+--- !u!114 &615185642732755935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,4 +286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171bd74f9fd8c9c41be07e8dd77c70c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  velocidad: 20
+  tiempoDeVida: 3
+  "da\xF1o": 1
