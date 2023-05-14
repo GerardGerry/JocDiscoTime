@@ -9,7 +9,7 @@ public class EnemyDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var damageReciever = other.GetComponent<ITakeDamage>();
+        var damageReciever = other.GetComponent<ItTakesDamage>();
         if (damageReciever != null)
         {
             Debug.Log("hitu");

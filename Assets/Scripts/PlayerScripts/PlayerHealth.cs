@@ -26,6 +26,7 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage
     {
         _currentHealth -= amount;
         OnTakeDamage?.Invoke(_currentHealth / _maxHealth);
+        Debug.Log("Auch, current health: " + _currentHealth);
     }
 
     public void Heal(float amount)
