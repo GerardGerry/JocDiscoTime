@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
     Dash _dash;
     Animator _animator;
     PlayerShoot _playerShoot;
-    PlayerShoot1 _playerShoot1;
-    PlayerShoot2 _playerShoot2;
+    PlayerShoot _playerShoot1;
+    PlayerShoot _playerShoot2;
     WeaponPivotController _weaponPivotController;
 
     Vector2 _input;
@@ -23,9 +23,9 @@ public class PlayerController : MonoBehaviour
         _inputMover = GetComponent<InputMover>();
         _dash = GetComponent<Dash>();
         _weaponPivotController = GetComponentInChildren<WeaponPivotController>();
-        _playerShoot = GetComponentInChildren<PlayerShoot>();
-        _playerShoot1 = GetComponentInChildren<PlayerShoot1>();
-        _playerShoot2 = GetComponentInChildren<PlayerShoot2>();
+        _playerShoot = GameObject.Find("WeaponPivotPosition_1").GetComponentInChildren<PlayerShoot>();
+        _playerShoot1 = GameObject.Find("WeaponPivotPosition_2").GetComponentInChildren<PlayerShoot>();
+        _playerShoot2 = GameObject.Find("WeaponPivotPosition_3").GetComponentInChildren<PlayerShoot>();
     }
 
     private void OnMove(InputValue value)
