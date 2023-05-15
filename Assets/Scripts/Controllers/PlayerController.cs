@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     Dash _dash;
     Animator _animator;
     PlayerShoot _playerShoot;
+    PlayerShoot1 _playerShoot1;
+    PlayerShoot2 _playerShoot2;
     WeaponPivotController _weaponPivotController;
 
     Vector2 _input;
@@ -22,6 +24,8 @@ public class PlayerController : MonoBehaviour
         _dash = GetComponent<Dash>();
         _weaponPivotController = GetComponentInChildren<WeaponPivotController>();
         _playerShoot = GetComponentInChildren<PlayerShoot>();
+        _playerShoot1 = GetComponentInChildren<PlayerShoot1>();
+        _playerShoot2 = GetComponentInChildren<PlayerShoot2>();
     }
 
     private void OnMove(InputValue value)
@@ -62,5 +66,7 @@ public class PlayerController : MonoBehaviour
     private void OnPlayerShoot()
     {
         _playerShoot.ShootBullet();
+        _playerShoot1.ShootBullet();
+        _playerShoot2.ShootBullet();
     }
 }
