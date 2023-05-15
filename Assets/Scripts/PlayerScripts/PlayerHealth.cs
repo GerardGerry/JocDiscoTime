@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour, ItTakesDamage
+public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
 {
     private float _currentHealth = 100;
     private float _maxHealth = 100;
     public float CurrentHealth => _currentHealth;
+
+    public float CurrentHealth1 { get => _currentHealth; set => _currentHealth = value; }
 
     public static Action<float> OnTakeDamage;
 
@@ -18,10 +20,10 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage
     }
 
 
-    public float GetHealth()
-    {
-        return _currentHealth;
-    }
+    //public float GetHealth()
+    //{
+    //    return _currentHealth;
+    //}
     public void TakeDamage(float amount)
     {
         _currentHealth -= amount;

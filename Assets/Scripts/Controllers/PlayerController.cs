@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,16 @@ public class PlayerController : MonoBehaviour
         _animator.SetFloat("Horizontal", moveX);
         _animator.SetFloat("Vertical", moveY);
         _animator.SetFloat("Speed", _input.SqrMagnitude());
+        _animator.SetFloat("Blend", LastPosition(moveX, moveY));
+    }
+
+    private float LastPosition(float x, float y)
+    {
+        if(x > 0 && y == 0) { return - 1; }
+        else if(x < 0 && y == 0) { return 1; }
+        else if(y > 0) { return 0.5f; }
+        else if(y < 0) { return -0.5f; }
+        else { return 0; }
     }
 
     private void OnPlayerDash()
