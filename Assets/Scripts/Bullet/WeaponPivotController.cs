@@ -6,43 +6,20 @@ using static UnityEngine.GraphicsBuffer;
 
 public class WeaponPivotController : MonoBehaviour
 {
-    float _angle;
-    Vector2 _input;
-    Vector2 _lastInput;
-    Transform _transform;
 
+    public Transform pivot; // El objeto de referencia (punto pivot) para la rotación
+    public float rotationSpeed = 10f;
 
-    private void Start()
-    {
-        _transform = GetComponent<Transform>();
-    }
+    private Vector3 mousePos;
 
     private void Update()
     {
-        PivotRotate();
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        Vector3 dir = mousePos - pivot.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        pivot.rotation = Quaternion.Slerp(pivot.rotation, Quaternion.Euler(0, 0, angle), rotationSpeed * Time.deltaTime);
     }
 
-    public void SetInput(InputValue value)
-    {
-        _lastInput = _input;
-        _input = value.Get<Vector2>();
-    }
-
-    void PivotRotate()
-    {
-        /*Transform transform = GetComponent<Transform>();
-        _angle = Vector2.Angle(Vector2.right, _input);
-        if (_input.y <= 0)
-        {
-            _angle = 360 - _angle;
-        }
-        transform.localEulerAngles = new Vector3(0, 0, _angle);*/
-        Vector2 rotationInput = _lastInput != Vector2.zero ? _lastInput : _input;
-        _angle = Vector2.Angle(Vector2.right, rotationInput);
-        if (rotationInput.y <= 0)
-        {
-            _angle = 360 - _angle;
-        }
-        _transform.localEulerAngles = new Vector3(0, 0, _angle);
-    }
 }

@@ -42,7 +42,7 @@ public class InputMover : MonoBehaviour
         _dash = GetComponent<Dash>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (controlType == ControlType.Force)
         {

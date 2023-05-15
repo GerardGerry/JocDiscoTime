@@ -12,10 +12,10 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
+  - CharacterCollider
   - PostProcessing
   - Bullet
-  - 
+  - SceneCollider
   - 
   - 
   - 

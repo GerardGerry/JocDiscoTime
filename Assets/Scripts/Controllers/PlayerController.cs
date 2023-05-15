@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
     private void OnMove(InputValue value)
     {
         _inputMover.SetInput(value);
-        _weaponPivotController.SetInput(value);
         _input = value.Get<Vector2>();
         float moveX = _input.x;
         float moveY = _input.y;
@@ -57,12 +56,11 @@ public class PlayerController : MonoBehaviour
         if (speedUp != null)
         {
             speedUp.IncreaseSpeed(true, _inputMover);
-            Debug.Log("Destroyed");
         }
     }
 
     private void OnPlayerShoot()
     {
-        _playerShoot.ShootBullet(_input);
+        _playerShoot.ShootBullet();
     }
 }
