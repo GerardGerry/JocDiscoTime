@@ -7,8 +7,8 @@ using static UnityEngine.GraphicsBuffer;
 public class WeaponPivotController : MonoBehaviour
 {
 
-    public Transform pivot; // El objeto de referencia (punto pivot) para la rotación
-    public float rotationSpeed = 10f;
+    public Transform pivot;
+    public float rotationSpeed = 0f;
 
     private Vector3 mousePos;
 
