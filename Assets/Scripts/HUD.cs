@@ -5,17 +5,34 @@ using UnityEngine;
 
 public class HUD : MonoBehaviour
 {
-    public PlayerHealth health;
-    public TextMeshProUGUI currentHealth;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private PlayerHealth health;
+    [SerializeField]
+    private TextMeshProUGUI currentHealth;
+    [SerializeField]
+    private GameObject[] hearts;
+   
+    // Update is called once per frame
+    //void Update()
+    //{
+    //    currentHealth.text = health.CurrentHealth1.ToString();
+    //}
+
+    public void DeactivateHearts(int heartNum)
     {
-        
+        hearts[heartNum].SetActive(false);
+    }
+    public void ActivateHearts(int heartNum)
+    {
+        hearts[heartNum].SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetHeaTH(int N)
     {
-        currentHealth.text = health.CurrentHealth1.ToString();
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            hearts[i].SetActive(i < N);
+        }
     }
+
 }
