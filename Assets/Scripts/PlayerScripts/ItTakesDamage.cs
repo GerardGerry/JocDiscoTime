@@ -5,6 +5,6 @@ using UnityEngine;
 public interface ItTakesDamage 
 {
     
-        void TakeDamage(float amount);
+        void TakeDamage();
    
 }

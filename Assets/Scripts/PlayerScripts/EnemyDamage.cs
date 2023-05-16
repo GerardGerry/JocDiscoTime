@@ -5,7 +5,6 @@ using static ItTakesDamage;
 
 public class EnemyDamage : MonoBehaviour
 {
-    public float Damage = 5;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,7 +12,7 @@ public class EnemyDamage : MonoBehaviour
         if (damageReciever != null)
         {
             Debug.Log("hitu");
-            damageReciever.TakeDamage(Damage);
+            damageReciever.TakeDamage();
         }
 
 
