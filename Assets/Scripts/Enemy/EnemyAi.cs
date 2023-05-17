@@ -31,6 +31,22 @@ public class EnemyAi : MonoBehaviour
 
     private void Update()
     {
-        
+        anim.SetBool("isRunning", isInChaseRange);
+
+        isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, checkPlayer);
+        isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, checkPlayer);
+
+        dir = target.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        dir.Normalize();
+        movement = dir;
+        if (animationRotate)
+        {
+            anim.SetFloat("X", dir.x);
+            anim.SetFloat("Y", dir.y);
+        }
     }
+
+
+
 }
