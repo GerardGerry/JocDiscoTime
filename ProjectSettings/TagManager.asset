@@ -12,10 +12,10 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
-  - 
-  - 
-  - 
+  - CharacterCollider
+  - PostProcessing
+  - Bullet
+  - SceneCollider
   - 
   - 
   - 
@@ -44,4 +44,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1576970951
     locked: 0

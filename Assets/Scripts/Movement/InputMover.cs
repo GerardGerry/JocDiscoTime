@@ -13,6 +13,7 @@ public class InputMover : MonoBehaviour
     private GameObject player;
 
     Vector2 _input;
+    Vector2 lastPosition;
 
     CameraShake _cameraShake;
 
@@ -41,7 +42,7 @@ public class InputMover : MonoBehaviour
         _dash = GetComponent<Dash>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (controlType == ControlType.Force)
         {
@@ -55,20 +56,14 @@ public class InputMover : MonoBehaviour
 
     public void SetInput(InputValue value)
     {
-
         _input = value.Get<Vector2>();
-
     }
 
     public void Move()
     {
-
         var targetVelocity = _input * speed;
         _rigidBody.velocity = Vector2.Lerp(_rigidBody.velocity, targetVelocity, _smoothing);
-
-
     }
-
     private void MoveByFoce()
     {
         _rigidBody.AddForce(_input * _force, ForceMode2D.Force);

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,10 @@ public class PlayerController : MonoBehaviour
     InputMover _inputMover;
     Dash _dash;
     Animator _animator;
+    PlayerShoot _playerShoot;
+    PlayerShoot _playerShoot1;
+    PlayerShoot _playerShoot2;
+    WeaponPivotController _weaponPivotController;
 
     Vector2 _input;
 
@@ -17,36 +22,36 @@ public class PlayerController : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _inputMover = GetComponent<InputMover>();
         _dash = GetComponent<Dash>();
+        _weaponPivotController = GetComponentInChildren<WeaponPivotController>();
+        _playerShoot = GameObject.Find("WeaponPivotPosition_1").GetComponentInChildren<PlayerShoot>();
+        _playerShoot1 = GameObject.Find("WeaponPivotPosition_2").GetComponentInChildren<PlayerShoot>();
+        _playerShoot2 = GameObject.Find("WeaponPivotPosition_3").GetComponentInChildren<PlayerShoot>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnMove(InputValue value)
     {
         _inputMover.SetInput(value);
         _input = value.Get<Vector2>();
-        _animator.SetBool("MovingLeft", _input.x < 0);
-        _animator.SetBool("MovingRight", _input.x > 0);
-        _animator.SetBool("MovingUp", _input.y > 0);
-        _animator.SetBool("MovingDown", _input.y < 0);
-        _animator.SetBool("MovingDownLeft", _input.y < 0 && _input.x < 0);
+        float moveX = _input.x;
+        float moveY = _input.y;
+        _animator.SetFloat("Horizontal", moveX);
+        _animator.SetFloat("Vertical", moveY);
+        _animator.SetFloat("Speed", _input.SqrMagnitude());
+        _animator.SetFloat("Blend", LastPosition(moveX, moveY));
+    }
 
-
+    private float LastPosition(float x, float y)
+    {
+        if(x > 0 && y == 0) { return - 1; }
+        else if(x < 0 && y == 0) { return 1; }
+        else if(y > 0) { return 0.5f; }
+        else if(y < 0) { return -0.5f; }
+        else { return 0; }
     }
 
     private void OnPlayerDash()
     {
         _dash.MakeDash(_input);
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,7 +60,13 @@ public class PlayerController : MonoBehaviour
         if (speedUp != null)
         {
             speedUp.IncreaseSpeed(true, _inputMover);
-            Debug.Log("Destroyed");
         }
+    }
+
+    private void OnPlayerShoot()
+    {
+        _playerShoot.ShootBullet();
+        _playerShoot1.ShootBullet();
+        _playerShoot2.ShootBullet();
     }
 }
