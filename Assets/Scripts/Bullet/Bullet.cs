@@ -22,17 +22,8 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Obtener una referencia al objeto que se ha colisionado
         GameObject objetoColisionado = other.gameObject;
-
-        // Si el objeto colisionado tiene un componente 'Enemigo', infligir daño
-        /*Enemigo enemigo = objetoColisionado.GetComponent<Enemigo>();
-        if (enemigo != null)
-        {
-            enemigo.RecibirDanio(daño);
-        }*/
-
-        // Destruir la bala
-        Destroy(gameObject);
+        Debug.Log("Colisión con: " + objetoColisionado.name);
+        Destroy(objetoColisionado);
     }
 }

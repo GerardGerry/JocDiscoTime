@@ -1,0 +1,1337 @@
+fileFormatVersion: 2
+guid: f02080e084a609f4883b13f46576e37d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rzqLOX_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1536
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110539e0597c7684781354d20b054c99
+      internalID: 505288147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_1
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1536
+        width: 96
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7543327313d01b9408194df1c427e3eb
+      internalID: -1612448730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1344
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba72edfab8d54e145a2ce77b059e75eb
+      internalID: -77091859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_3
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1344
+        width: 96
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428415c8baa84dc489d3f0f9a04baeba
+      internalID: 381065701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_4
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1152
+        width: 108
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8361e59abb56b4fbbc08517c763912
+      internalID: 1787345310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1152
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94999808f8abec4d958996e4fabdcca
+      internalID: -100579266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_6
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1152
+        width: 102
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ab5b8ef55a7cc4dbb2e1383dcaeca5
+      internalID: -1213806110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_7
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1152
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0554658789e08c34a9333ce7c0ef638a
+      internalID: 560397510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 960
+        width: 102
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4fd9e18c22bf04ca9c8e1b0d93d2a1
+      internalID: 1310159368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_9
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 960
+        width: 96
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cefb92734c97f42801c34d98c12d65
+      internalID: 1682124494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_10
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 960
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e208bf0bbb25b4343a5bb61d7f2511c2
+      internalID: -200138539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_11
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 960
+        width: 96
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd77e6213a29a324d8eb028e3a567255
+      internalID: -269171856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_12
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 960
+        width: 102
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569c306b99f136b4092ab8801116201b
+      internalID: 547742905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_13
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 960
+        width: 96
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8372c35b7baf66468582c52ab91bf8f
+      internalID: 1773929507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_14
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 960
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569fba517644f224fac628a8dbc0b93b
+      internalID: 76168464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_15
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 960
+        width: 96
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6597323375e255e4d8dae04dec576f46
+      internalID: 640074710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_16
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 768
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3efe111e8a0e344eb3b39af93c829b4
+      internalID: -1438218617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_17
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 768
+        width: 108
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f83824b47dad547bd3024b34506be0
+      internalID: -524856616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_18
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 768
+        width: 120
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d25db0e29396424683427e7a739b2ca
+      internalID: -1675604101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 768
+        width: 132
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dcbe4d7737189d4291810c052ec179a
+      internalID: -1080410384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_20
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 768
+        width: 114
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6361ece26aad44e90825b1ae9bf2c0
+      internalID: -1738017572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_21
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 768
+        width: 102
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fe6a8d6a5f6d54e8ea603fdb67bfda
+      internalID: -1516728057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_22
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 576
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d312bd5810b4c745bbf9cc84a56aa19
+      internalID: -1713044770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_23
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 576
+        width: 108
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab882a162f86d89478d8d5d22416b72d
+      internalID: 961861785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_24
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 588
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a18a6dfb699f44eadc873abf0aff7f
+      internalID: -1502557437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_25
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 594
+        width: 108
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2c054bb22c2bc488e6e782ce7bff20
+      internalID: -1448597476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_26
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 594
+        width: 114
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef892f195f329741a3de052a4f335b8
+      internalID: -140786627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_27
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 576
+        width: 114
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b02e5d40e65a749a9e0de293985220
+      internalID: -1814319968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_28
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 576
+        width: 102
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16d25db3956efc4694a46ed43f59d14
+      internalID: 1649080559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_29
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 576
+        width: 102
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16989740514c9cc42a49b89366ba8323
+      internalID: -305193452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_30
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 384
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f6dd60c08df62489c1145f63c7eddf
+      internalID: -1647933443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_31
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 384
+        width: 108
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f900c52239288604baf1e103b34ab285
+      internalID: -264180716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_32
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 408
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a4c64240b95bd47b844083c08cc2d2
+      internalID: -2022510777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_34
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 486
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3330fbeb665edf24b92b6e559edb9e9f
+      internalID: 693975175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_36
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 474
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc3e5a73f9c1d64bbdb7a091f40d643
+      internalID: 49795009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_39
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 408
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a498d1cf1ffffc142976d049c557a82c
+      internalID: -1821615331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_40
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 408
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac7218ba5b3b791418200ab5355862f6
+      internalID: -821245103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_41
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 396
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa895e64282294428017b9886e74304
+      internalID: 1782583220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_42
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 390
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37ec1f90d5409b4cb2c9a836c2a981e
+      internalID: 517806876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_43
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 192
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c75f13ad3c7414bab6171d99b37138
+      internalID: -1942717201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_44
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 192
+        width: 108
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f27f2b75702829488ff68c7d6ba15bf
+      internalID: -2010735283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_45
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 192
+        width: 102
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8845d3408dd7de14da49dfda47ff31b5
+      internalID: -1006608179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_47
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 0
+        width: 168
+        height: 294
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6712195e70610394f8b08b00e68a7ffe
+      internalID: 1969993676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_48
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 192
+        width: 174
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79644ebf110bb4e46a823f8c746ad445
+      internalID: 207106307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_49
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 192
+        width: 174
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d58ab6868b311408d6687a6495c1ee
+      internalID: 760606224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_50
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 192
+        width: 174
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc6d22adefc92e48a60c7d79e4bfd8f
+      internalID: 615753971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_51
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77976e934d25a84c93f7567caaa92a5
+      internalID: 1445682108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_52
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 102
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbdc9b556b99b9499e418ddf0a7cfcd
+      internalID: 1466934907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_53
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 0
+        width: 126
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b98484327c96ef499a01b96cbdd89db
+      internalID: 1827958256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_54
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 0
+        width: 132
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822eadab3ee0c5840a59f6115d143dcf
+      internalID: 921286102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_55
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 0
+        width: 126
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30cda6ee5b3d6644babf7623632a726b
+      internalID: -1652208645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_56
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 48
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5be4efb19fc9d45bfa10b06cac8159
+      internalID: -1951947314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_57
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 0
+        width: 96
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c53efbfe75a7834a9a2b3083c8d67ad
+      internalID: 1803300047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_33
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 199
+        width: 167
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 18}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6072e3c007873474cbaa37425ab5cdf0
+      internalID: 1587703890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rzqLOX_35
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 0
+        width: 126
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f57a2739470784ca1cd57cf6314ba2
+      internalID: -846420135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      rzqLOX_39: -1821615331
+      rzqLOX_54: 921286102
+      rzqLOX_8: 1310159368
+      rzqLOX_44: -2010735283
+      rzqLOX_36: 49795009
+      rzqLOX_53: 1827958256
+      rzqLOX_2: -77091859
+      rzqLOX_48: 207106307
+      rzqLOX_37: -620909666
+      rzqLOX_42: 517806876
+      rzqLOX_15: 640074710
+      rzqLOX_18: -1675604101
+      rzqLOX_32: -2022510777
+      rzqLOX_4: 1787345310
+      rzqLOX_35: -846420135
+      rzqLOX_50: 615753971
+      rzqLOX_16: -1438218617
+      rzqLOX_55: -1652208645
+      rzqLOX_58: 1143860196
+      rzqLOX_49: 760606224
+      rzqLOX_3: 381065701
+      rzqLOX_13: 1773929507
+      rzqLOX_30: -1647933443
+      rzqLOX_5: -100579266
+      rzqLOX_56: -1951947314
+      rzqLOX_10: -200138539
+      rzqLOX_11: -269171856
+      rzqLOX_43: -1942717201
+      rzqLOX_28: 1649080559
+      rzqLOX_25: -1448597476
+      rzqLOX_41: 1782583220
+      rzqLOX_12: 547742905
+      rzqLOX_51: 1445682108
+      rzqLOX_23: 961861785
+      rzqLOX_24: -1502557437
+      rzqLOX_19: -1080410384
+      rzqLOX_29: -305193452
+      rzqLOX_38: 323613021
+      rzqLOX_26: -140786627
+      rzqLOX_1: -1612448730
+      rzqLOX_40: -821245103
+      rzqLOX_46: -822128299
+      rzqLOX_47: 1969993676
+      rzqLOX_9: 1682124494
+      rzqLOX_33: 1587703890
+      rzqLOX_14: 76168464
+      rzqLOX_45: -1006608179
+      rzqLOX_57: 1803300047
+      rzqLOX_7: 560397510
+      rzqLOX_21: -1516728057
+      rzqLOX_6: -1213806110
+      rzqLOX_27: -1814319968
+      rzqLOX_17: -524856616
+      rzqLOX_52: 1466934907
+      rzqLOX_0: 505288147
+      rzqLOX_31: -264180716
+      rzqLOX_20: -1738017572
+      rzqLOX_34: 693975175
+      rzqLOX_22: -1713044770
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
