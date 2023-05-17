@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Obtener una referencia al objeto que se ha colisionado
-        GameObject objetoColisionado = other.gameObject;
+        //GameObject objetoColisionado = other.gameObject;
 
         // Si el objeto colisionado tiene un componente 'Enemigo', infligir daño
         /*Enemigo enemigo = objetoColisionado.GetComponent<Enemigo>();
@@ -31,6 +31,11 @@ public class Bullet : MonoBehaviour
         {
             enemigo.RecibirDanio(daño);
         }*/
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+        }
 
         // Destruir la bala
         Destroy(gameObject);

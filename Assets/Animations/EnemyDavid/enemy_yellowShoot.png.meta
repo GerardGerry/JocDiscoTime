@@ -1,0 +1,1399 @@
+fileFormatVersion: 2
+guid: 9cb170d51b2286c4f9f6e01f63eb8c67
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: enemy_yellowShoot_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 999
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611afe2d189a2c843b1b0fc5ee0eb302
+      internalID: -1161584050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 999
+        width: 64
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4a28ee276d89647858a4757e457c60
+      internalID: -803773960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_2
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 874
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e0ed0aa7eeb4441a9fd80835c8afc8
+      internalID: 1387305659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 874
+        width: 64
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4955730d3b6aedc4cad3bd1d098f369e
+      internalID: 453797547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_4
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 749
+        width: 72
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b3518a9af5cb741b7d71e2e508c984
+      internalID: -1954215429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_5
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 749
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed21305297d66da4f8a2c7e33028898b
+      internalID: 1890939151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_6
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 749
+        width: 68
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f46f0763402c304ab562888fecd2475
+      internalID: -1915224178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_7
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 749
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c861bba9050c75742b03a40a2f83820e
+      internalID: -569253276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_8
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 624
+        width: 68
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf8b58c1ab5c7b4180694f72210b0ec
+      internalID: 841931738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_9
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 624
+        width: 64
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d3f9afeec1abf40ae53bc9f978fd27
+      internalID: -9769738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_10
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 624
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b0bf05434306c43a165b2518b7b73f
+      internalID: 277775926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_11
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 624
+        width: 64
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227c4929198c8f54b8987d0bcfdcb39c
+      internalID: -1343588824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_12
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 624
+        width: 68
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca7e5dad0e1d5144b2f19c3de24f8fb
+      internalID: -119172983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_13
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 624
+        width: 64
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97f2bfd1bb57ca459b883ec72be7d2f
+      internalID: -157687397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_14
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 624
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce46d89e56128d478ab2374195f06c1
+      internalID: 1981254613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_15
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 624
+        width: 64
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee0e311c7778024badb738a4f390f69
+      internalID: 378897644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_16
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 499
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb83a12eb0da2e44a89d1b54ecb78cf
+      internalID: 1097356705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_17
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 499
+        width: 72
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7a881d241a21747afb1b19ae12b69d
+      internalID: -1053476151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_18
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 499
+        width: 79
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99e1dca6ddeaef4c94d0315ba9dd52c
+      internalID: -542668546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_19
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 499
+        width: 87
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ff31ec7f8bd5f4aac4b03ae426f3d5
+      internalID: -354659012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_20
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 499
+        width: 75
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a96907dbcd696489bb94a6d3adc6dc
+      internalID: -408006550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_21
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 499
+        width: 68
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70f3af222bc48f4686dc42e9d1b36ee
+      internalID: 1335796871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_22
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 374
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae62f8be5b772042b479e1aeb2af1fa
+      internalID: 164884603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_23
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 374
+        width: 72
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afb442a185ecb54898ced1ce2cd73ec
+      internalID: -1601006452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_24
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 382
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc333aabc50cb0459b1749c81116ea4
+      internalID: -1976880397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_25
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 386
+        width: 72
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa53fe1a65b0b3948b57c2f3c06ff4c3
+      internalID: 1271492217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_26
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 386
+        width: 75
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3443512456610d84f81dfe5edfca15ea
+      internalID: -1127990420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_27
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 374
+        width: 75
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8608284d783fb324da38657594fc503b
+      internalID: -1126327649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_28
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 374
+        width: 68
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180209c08e5c3894f89d64b7933d9c9d
+      internalID: -1188319761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_29
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 374
+        width: 68
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57c4876df861a54b91fa3548f857fa9
+      internalID: 795902353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_30
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 249
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8460ac36222908b4abf39d40ebbc1190
+      internalID: -1425268506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_31
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 249
+        width: 72
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aea4d96246d6a645a93de6c199afbf4
+      internalID: 1891440351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_32
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 265
+        width: 63
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90bae1b1e3d7b824c9922f76a5fd50a1
+      internalID: -125171219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_33
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 331
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5851c54776da8b4283a21d5f570b14e
+      internalID: -362897256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_34
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 316
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1404012a4f6fb44aef773bd1558844
+      internalID: -1870106682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_35
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 312
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088efcfc088cb4b4b94b9587db53238d
+      internalID: 203020258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_36
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 308
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0215226fbc54349a1ef9ad927497fb
+      internalID: -402066610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_37
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 304
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7709f23bb675706448a262c94c35a448
+      internalID: -1393670576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_38
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 300
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208411ddd578d6844b13cd2b4eb408ef
+      internalID: -700832377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_39
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 265
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3b53b4826116b4a970b36149689fda
+      internalID: -1433233376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_40
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 265
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0893967b84642e64aa23c5eec976501e
+      internalID: 1537447174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_41
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 257
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2649663c6acb3b4084a18bc2308c684
+      internalID: 505920009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_42
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 253
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a6158fd30e33d9459f92474d56014ae
+      internalID: -2075700721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_43
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 124
+        width: 64
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3e4dacb4a821b4aa5e0e6aadcae4ac
+      internalID: 688005101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_44
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 124
+        width: 72
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818b92c09f3c9c944ab3d0ad8f61c239
+      internalID: 2096586157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_45
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 124
+        width: 68
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c63e0c66a113c4e8fe2c53c2fffc12
+      internalID: 393867312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_46
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 0
+        width: 83
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b334a63f0940e174bbf32653ecc53dd8
+      internalID: -777878282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_47
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 0
+        width: 110
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7d9e521a9ed604abab7ad396b476f9
+      internalID: 1449888903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_48
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 124
+        width: 115
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f3232c0c626ef43b1b7350cb98f77b
+      internalID: 1321523101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_49
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 124
+        width: 115
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957975067d3f26d4dac719a91923c306
+      internalID: 991453002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_50
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 124
+        width: 115
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d57c2074c4e5d40842982ed2e55ab5
+      internalID: -1746609311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_51
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 64
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6704e8dbf661143b0ecf4c95e71e84
+      internalID: 638734286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_52
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 68
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1e5470fb34f8448bc68b10e5a691e1
+      internalID: -926491444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_53
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 82
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e556d323b94aadc47ab6c0c1c128b07b
+      internalID: -1748274150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_54
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 86
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08afdc6f002acda4a82cb8da768058cf
+      internalID: -65443355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_55
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 0
+        width: 83
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c934e99fbc276ec4fa9a88cdba8e5682
+      internalID: 17906543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_56
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 31
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89f1bb316b934a4ab6255ab3fa8c81e
+      internalID: -787622759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_yellowShoot_57
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 0
+        width: 64
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0f899f02cc79746995583992ab5c7e
+      internalID: 2094530320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      enemy_yellowShoot_37: -1393670576
+      enemy_yellowShoot_27: -1126327649
+      enemy_yellowShoot_23: -1601006452
+      enemy_yellowShoot_24: -1976880397
+      enemy_yellowShoot_54: -65443355
+      enemy_yellowShoot_41: 505920009
+      enemy_yellowShoot_9: -9769738
+      enemy_yellowShoot_22: 164884603
+      enemy_yellowShoot_40: 1537447174
+      enemy_yellowShoot_47: 1449888903
+      enemy_yellowShoot_36: -402066610
+      enemy_yellowShoot_34: -1870106682
+      enemy_yellowShoot_56: -787622759
+      enemy_yellowShoot_26: -1127990420
+      enemy_yellowShoot_38: -700832377
+      enemy_yellowShoot_49: 991453002
+      enemy_yellowShoot_10: 277775926
+      enemy_yellowShoot_1: -803773960
+      enemy_yellowShoot_3: 453797547
+      enemy_yellowShoot_51: 638734286
+      enemy_yellowShoot_39: -1433233376
+      enemy_yellowShoot_8: 841931738
+      enemy_yellowShoot_17: -1053476151
+      enemy_yellowShoot_21: 1335796871
+      enemy_yellowShoot_48: 1321523101
+      enemy_yellowShoot_52: -926491444
+      enemy_yellowShoot_43: 688005101
+      enemy_yellowShoot_45: 393867312
+      enemy_yellowShoot_12: -119172983
+      enemy_yellowShoot_20: -408006550
+      enemy_yellowShoot_32: -125171219
+      enemy_yellowShoot_33: -362897256
+      enemy_yellowShoot_55: 17906543
+      enemy_yellowShoot_50: -1746609311
+      enemy_yellowShoot_0: -1161584050
+      enemy_yellowShoot_35: 203020258
+      enemy_yellowShoot_15: 378897644
+      enemy_yellowShoot_53: -1748274150
+      enemy_yellowShoot_5: 1890939151
+      enemy_yellowShoot_44: 2096586157
+      enemy_yellowShoot_57: 2094530320
+      enemy_yellowShoot_4: -1954215429
+      enemy_yellowShoot_30: -1425268506
+      enemy_yellowShoot_16: 1097356705
+      enemy_yellowShoot_18: -542668546
+      enemy_yellowShoot_46: -777878282
+      enemy_yellowShoot_7: -569253276
+      enemy_yellowShoot_29: 795902353
+      enemy_yellowShoot_11: -1343588824
+      enemy_yellowShoot_2: 1387305659
+      enemy_yellowShoot_31: 1891440351
+      enemy_yellowShoot_19: -354659012
+      enemy_yellowShoot_42: -2075700721
+      enemy_yellowShoot_25: 1271492217
+      enemy_yellowShoot_13: -157687397
+      enemy_yellowShoot_6: -1915224178
+      enemy_yellowShoot_14: 1981254613
+      enemy_yellowShoot_28: -1188319761
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
