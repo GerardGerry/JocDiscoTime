@@ -5,22 +5,39 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField]
-    GameObject bullet;
-    [SerializeField]
-    GameObject bullet2;
-    [SerializeField]
-    GameObject bullet3;
+    List<GameObject> bullets; // Lista de GameObjects de balas
+
+    int currentBulletIndex;
+
+    void Start()
+    {
+        currentBulletIndex = 0; // Establecer la bala inicial
+    }
+
+    void Update()
+    {
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+
+        if (scrollInput > 0f) // Desplazamiento hacia arriba
+        {
+            // Cambiar a la siguiente bala
+            currentBulletIndex = (currentBulletIndex + 1) % bullets.Count;
+        }
+        else if (scrollInput < 0f) // Desplazamiento hacia abajo
+        {
+            // Cambiar a la bala anterior
+            currentBulletIndex = (currentBulletIndex - 1 + bullets.Count) % bullets.Count;
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            ShootBullet();
+        }
+    }
 
     public void ShootBullet()
     {
-        GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
+        GameObject newBullet = Instantiate(bullets[currentBulletIndex], transform.position, transform.rotation);
+        // Resto del código para el comportamiento de la bala...
     }
-
-    public void ShootMultiBullet()
-    {
-        GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
-        GameObject newBullet1 = Instantiate(bullet2, transform.position, transform.rotation);
-        GameObject newBullet2 = Instantiate(bullet3, transform.position, transform.rotation);
-    }
-
 }
