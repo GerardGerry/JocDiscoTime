@@ -47,6 +47,22 @@ public class EnemyAi : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (isInChaseRange && !isInAttackRange)
+        {
 
+            MoveCharacter(movement);
+        }
+        if (isInAttackRange)
+        {
+            rb.velocity = Vector2.zero;
+        }
+    }
+
+    private void MoveCharacter(Vector2 dir)
+    {
+        rb.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
+    }
 
 }
