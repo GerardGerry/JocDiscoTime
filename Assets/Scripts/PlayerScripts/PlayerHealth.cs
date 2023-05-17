@@ -6,43 +6,29 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
 {
     [SerializeField]
-    private int _currentHealth = 6;
-    [SerializeField]
-    private float _maxHealth = 100;
+    [Range (0, 6)]
+    private int m_currentHearts = 6;
+    
+
     [SerializeField]
     HUD hud;
 
-
-    //public float CurrentHealth => _currentHealth;
-
-    //public float CurrentHealth1 { get => _currentHealth; set => _currentHealth = value; }
-
-    public static Action<float> OnTakeDamage;
-
-
-    void Start()
-    {
-        OnTakeDamage?.Invoke(_currentHealth / _maxHealth);
-    }
-
-
-    //public float GetHealth()
-    //{
-    //    return _currentHealth;
-    //}
     public void TakeDamage()
     {
-        //_currentHealth -= amount;
-        //OnTakeDamage?.Invoke(_currentHealth / _maxHealth);
-        //Debug.Log("Auch, current health: " + _currentHealth);
-        _currentHealth--;
-        hud.DeactivateHearts(_currentHealth);
+        m_currentHearts--;
+        CheckAmount(m_currentHearts);
+        hud.SetHealth(m_currentHearts);
     }
 
-    public void Heal(float amount)
+    public void Heal()
     {
-        // _currentHealth += amount;
-        _currentHealth++;
-        hud.ActivateHearts(_currentHealth);
+        m_currentHearts++;
+        CheckAmount(m_currentHearts);
+        hud.SetHealth(m_currentHearts);
+    }
+    private void CheckAmount(int amount)
+    {
+        if (amount < 0) { m_currentHearts = 0; }
+        else if (amount > 6) { m_currentHearts = 6; } 
     }
 }

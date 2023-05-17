@@ -14,7 +14,5 @@ public class EnemyDamage : MonoBehaviour
             Debug.Log("hitu");
             damageReciever.TakeDamage();
         }
-
-
     }   
 }

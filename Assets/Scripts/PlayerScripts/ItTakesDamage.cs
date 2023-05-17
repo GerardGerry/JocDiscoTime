@@ -4,7 +4,5 @@ using UnityEngine;
 
 public interface ItTakesDamage 
 {
-    
-        void TakeDamage();
-   
+       void TakeDamage();   
 }
