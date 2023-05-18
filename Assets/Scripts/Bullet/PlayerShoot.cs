@@ -29,10 +29,6 @@ public class PlayerShoot : MonoBehaviour
             currentBulletIndex = (currentBulletIndex - 1 + bullets.Count) % bullets.Count;
         }
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            ShootBullet();
-        }
     }
 
     public void ShootBullet()
