@@ -1,68 +1,137 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class EnemyAi : MonoBehaviour
+public class EnemyAI : MonoBehaviour
 {
-    public float speed;
-    public float checkRadius;
-    public float attackRadius;
+    public int distanceCheck;
 
-    public bool animationRotate;
-
-    public LayerMask checkPlayer;
-
-    private Transform target;
-    private Rigidbody2D rb;
-    private Animator anim;
-    private Vector2 movement;
-    public Vector3 dir;
-
-    private bool isInChaseRange;
-    private bool isInAttackRange;
-
-    private void Start()
+    SpriteRenderer spriteFlip;
+    public enum EState
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        target = GameObject.FindWithTag("Player").transform;
+        Idle,
+        Wander,
+        Attack,
+    }
+
+    FSM<EState> brain;
+
+
+    float _currentTime;
+
+    Vector3 _direction;
+
+    [SerializeField]
+    float Speed = 2;
+
+    Transform _player;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+        InitFSM();
+
+        _currentTime = 0;
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        spriteFlip = GetComponent<SpriteRenderer>();
+
 
     }
 
-    private void Update()
+    private void InitFSM()
     {
-        anim.SetBool("isRunning", isInChaseRange);
-
-        isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, checkPlayer);
-        isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, checkPlayer);
-
-        dir = target.position - transform.position;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        dir.Normalize();
-        movement = dir;
-        if (animationRotate)
+        brain = new FSM<EState>(EState.Idle);
+        brain.SetOnEnter(EState.Idle, () => _currentTime = 0);
+        brain.SetOnEnter(EState.Wander, () =>
         {
-            anim.SetFloat("X", dir.x);
-            anim.SetFloat("Y", dir.y);
+            _currentTime = 0;
+            float rdmAngle = Random.Range(0, 360);
+            _direction = new Vector3(Mathf.Sin(rdmAngle), Mathf.Cos(rdmAngle), 0);
+        });
+
+        brain.SetOnStay(EState.Idle, IdleUpdate);
+        brain.SetOnStay(EState.Wander, WanderUpdate);
+        brain.SetOnStay(EState.Attack, AttackUpdate);
+
+    }
+
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+
+        var enemyPosition = new Vector2(transform.localPosition.x, transform.localPosition.y).normalized;
+        Debug.Log(enemyPosition);
+        if (enemyPosition.x < 0)
+        {
+            spriteFlip.flipX = true;
+        }
+        else if (enemyPosition.x > 0)
+        {
+            spriteFlip.flipX = false;
+        }
+
+        brain.Update();
+    }
+
+
+    private void IdleUpdate()
+    {
+        //Execute
+        _currentTime += Time.deltaTime;
+
+        //CheckTriggers
+        if (_currentTime > 2.0f)
+        {
+            brain.ChangeState(EState.Wander);
+
+        }
+
+        if (Vector2.Distance(transform.position, _player.position) < distanceCheck)
+        {
+            brain.ChangeState(EState.Attack);
         }
     }
 
-    private void FixedUpdate()
+    private void WanderUpdate()
     {
-        if (isInChaseRange && !isInAttackRange)
-        {
+        //Execute
+        transform.position += _direction * Speed * Time.deltaTime;
+        _currentTime += Time.deltaTime;
 
-            MoveCharacter(movement);
-        }
-        if (isInAttackRange)
+        //CheckTriggers
+        if (_currentTime > distanceCheck)
         {
-            rb.velocity = Vector2.zero;
+            brain.ChangeState(EState.Idle);
+
+        }
+
+        if (Vector2.Distance(transform.position, _player.position) < distanceCheck)
+        {
+            brain.ChangeState(EState.Attack);
         }
     }
 
-    private void MoveCharacter(Vector2 dir)
+    private void AttackUpdate()
     {
-        rb.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
+        //Execute
+        _direction = (_player.position - transform.position).normalized;
+        transform.position += _direction * Speed * Time.deltaTime;
+
+        //Trigger
+        if (Vector2.Distance(transform.position, _player.position) >= distanceCheck)
+        {
+            brain.ChangeState(EState.Idle);
+
+        }
     }
+
+
+
 
 }
