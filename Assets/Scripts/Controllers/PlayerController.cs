@@ -66,5 +66,7 @@ public class PlayerController : MonoBehaviour
     private void OnPlayerShoot()
     {
         _playerShoot.ShootBullet();
+        _playerShoot1.ShootBullet();
+        _playerShoot2.ShootBullet();
     }
 }
