@@ -8,13 +8,21 @@ public class PlayerShoot : MonoBehaviour
     List<GameObject> bullets; // Lista de GameObjects de balas
 
     int currentBulletIndex;
+    float timer = 0f;
+    [SerializeField]
+    bool shootWithCooldown;
+
+    bool canShoot = true;
+
+    [SerializeField] private float _shootCooldown;
+
 
     void Start()
     {
         currentBulletIndex = 0; // Establecer la bala inicial
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
 
@@ -29,11 +37,32 @@ public class PlayerShoot : MonoBehaviour
             currentBulletIndex = (currentBulletIndex - 1 + bullets.Count) % bullets.Count;
         }
 
+        if (timer < _shootCooldown)
+        {
+            timer = timer + Time.deltaTime;
+        }
+        if (timer >= _shootCooldown)
+        {
+            timer = 0;
+            canShoot = true;
+        }
+
     }
 
     public void ShootBullet()
     {
-        GameObject newBullet = Instantiate(bullets[currentBulletIndex], transform.position, transform.rotation);
+        if (shootWithCooldown)
+        {
+            if (canShoot)
+            {
+                canShoot = false;
+                GameObject newBullet = Instantiate(bullets[currentBulletIndex], transform.position, transform.rotation);
+            }
+        }
+        else
+        {
+            GameObject newBullet = Instantiate(bullets[currentBulletIndex], transform.position, transform.rotation);
+        }
         // Resto del código para el comportamiento de la bala...
     }
 }

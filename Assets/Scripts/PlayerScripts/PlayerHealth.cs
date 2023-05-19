@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
 {
     [SerializeField]
-    [Range (0, 6)]
+    [Range (0, 8)]
     private int m_currentHearts = 6;
     
 
@@ -29,6 +29,6 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
     private void CheckAmount(int amount)
     {
         if (amount < 0) { m_currentHearts = 0; }
-        else if (amount > 6) { m_currentHearts = 6; } 
+        else if (amount > 8) { m_currentHearts = 8; } 
     }
 }
