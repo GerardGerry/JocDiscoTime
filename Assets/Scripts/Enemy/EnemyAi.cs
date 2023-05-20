@@ -8,6 +8,9 @@ public class EnemyAI : MonoBehaviour
 {
     public int distanceCheck;
 
+    public float Hitpoints;
+    public float MaxHitPoints = 3;
+
     SpriteRenderer spriteFlip;
     public enum EState
     {
@@ -38,6 +41,8 @@ public class EnemyAI : MonoBehaviour
 
         spriteFlip = GetComponent<SpriteRenderer>();
 
+        Hitpoints = MaxHitPoints;
+
 
     }
 
@@ -56,6 +61,15 @@ public class EnemyAI : MonoBehaviour
         brain.SetOnStay(EState.Wander, WanderUpdate);
         brain.SetOnStay(EState.Attack, AttackUpdate);
 
+    }
+
+    public void TakeHit(float damage)
+    {
+        Hitpoints -= damage;
+        if (Hitpoints <= 0) 
+        {
+            Destroy(gameObject);
+        }
     }
 
 
