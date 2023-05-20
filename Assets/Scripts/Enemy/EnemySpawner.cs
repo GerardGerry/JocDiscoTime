@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : MonoBehaviour, ItSpawns
 {
     [SerializeField] private float spawnRate = 1f;
 
@@ -12,19 +12,27 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Spawner());
+       
     }
 
+    public void ActivateSpawn()
+    {
+        StartCoroutine(Spawner());
+
+        //if (collision == collision.GetComponent("spawnTest"))
+        //{
+        //    StartCoroutine(Spawner());
+        //}
+    }
     private IEnumerator Spawner() { 
     
         WaitForSeconds wait = new WaitForSeconds(spawnRate);
-
+  
         while (canSpawn)
         {
             yield return wait;
             int rand = Random.Range(0, enemyPrefabs.Length);
             GameObject enemyToSpawn = enemyPrefabs[rand];
-
             Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
         }
     } 
