@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spikes : MonoBehaviour
+public class DamageSecond : MonoBehaviour
 {
     private float timer = 2;
     private void OnTriggerStay2D(Collider2D collision)
