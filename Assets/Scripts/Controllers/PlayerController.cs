@@ -72,8 +72,8 @@ public class PlayerController : MonoBehaviour
         _playerShoot2.ShootBullet();
     }
 
-    private void PlayerHealthLow()
+    public void PlayerHealthLow(int a)
     {
-        _inputMover.LowHealth();
+        _inputMover.LowHealth(a);
     }
 }

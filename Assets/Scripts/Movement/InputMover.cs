@@ -35,6 +35,8 @@ public class InputMover : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    bool goSlower = true;
+
     // Start is called before the first frame update
     void Awake()
     {       
@@ -81,9 +83,24 @@ public class InputMover : MonoBehaviour
         _destroyedCollider.PlayerData(_force, _input);
     }
 
-    public void LowHealth()
+    public void LowHealth( int a)
     {
-        Debug.Log("Hola");
+        Debug.Log(a);
+        
+
+        if(a == 1 && goSlower == true)
+        {
+            goSlower = false;
+            _force = _force / 2;
+            speed = speed / 2;
+        }
+        else if(a > 1 && goSlower == false) 
+        {
+            goSlower = true;
+            _force = _force * 2;
+            speed = speed * 2;
+        }
+        Debug.Log(speed);
     }
 
 }
