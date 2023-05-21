@@ -81,4 +81,9 @@ public class InputMover : MonoBehaviour
         _destroyedCollider.PlayerData(_force, _input);
     }
 
+    public void LowHealth()
+    {
+        Debug.Log("Hola");
+    }
+
 }

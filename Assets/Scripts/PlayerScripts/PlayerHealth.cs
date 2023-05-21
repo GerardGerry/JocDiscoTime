@@ -29,6 +29,6 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
     private void CheckAmount(int amount)
     {
         if (amount < 0) { m_currentHearts = 0; }
-        else if (amount > 8) { m_currentHearts = 8; } 
+        else if (amount > 8) { m_currentHearts = 8; }
     }
 }

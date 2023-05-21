@@ -4,68 +4,147 @@ using UnityEngine;
 
 public class EnemyAi : MonoBehaviour
 {
-    public float speed;
-    public float checkRadius;
-    public float attackRadius;
+    public int distanceCheck;
 
-    public bool animationRotate;
+    public float Hitpoints;
+    public float MaxHitPoints = 3;
 
-    public LayerMask checkPlayer;
 
-    private Transform target;
-    private Rigidbody2D rb;
 
-    private Collider2D colliderTest;
-
-    private Animator anim;
-    private Vector2 movement;
-    public Vector3 dir;
-
-    private bool isInChaseRange;
-    private bool isInAttackRange;
-
-    private void Start()
+    SpriteRenderer spriteFlip;
+    public enum EState
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        target = GameObject.FindWithTag("Player").transform;
-        colliderTest = GetComponent<Collider2D>();
+        Idle,
+        Wander,
+        Attack,
+    }
+
+    FSM<EState> brain;
+
+
+    float _currentTime;
+
+    Vector3 _direction;
+
+    [SerializeField]
+    float Speed = 2;
+
+    Transform _player;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+        InitFSM();
+
+        _currentTime = 0;
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        spriteFlip = GetComponent<SpriteRenderer>();
+
+        Hitpoints = MaxHitPoints;
+
 
     }
 
-    private void Update()
+    private void InitFSM()
     {
-        anim.SetBool("isRunning", isInChaseRange);
-
-        isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, checkPlayer);
-        isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, checkPlayer);
-
-        dir = target.position - transform.position;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        dir.Normalize();
-        movement = dir;
-        if (animationRotate)
+        brain = new FSM<EState>(EState.Idle);
+        brain.SetOnEnter(EState.Idle, () => _currentTime = 0);
+        brain.SetOnEnter(EState.Wander, () =>
         {
-            anim.SetFloat("X", dir.x);
-            anim.SetFloat("Y", dir.y);
+            _currentTime = 0;
+            float rdmAngle = Random.Range(0, 360);
+            _direction = new Vector3(Mathf.Sin(rdmAngle), Mathf.Cos(rdmAngle), 0);
+        });
+
+        brain.SetOnStay(EState.Idle, IdleUpdate);
+        brain.SetOnStay(EState.Wander, WanderUpdate);
+        brain.SetOnStay(EState.Attack, AttackUpdate);
+
+    }
+
+    public void TakeHit(float damage)
+    {
+        Hitpoints -= damage;
+        if (Hitpoints <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 
-    private void FixedUpdate()
+
+
+    // Update is called once per frame
+    void Update()
     {
-        if (isInChaseRange && !isInAttackRange)
+
+
+        var enemyPosition = new Vector2(transform.localPosition.x, transform.localPosition.y).normalized;
+        Debug.Log(enemyPosition);
+        if (enemyPosition.x < 0)
         {
-            MoveCharacter(movement);
+            spriteFlip.flipX = true;
         }
-        if (isInAttackRange)
+        else if (enemyPosition.x > 0)
         {
-            rb.velocity = Vector2.zero;
+            spriteFlip.flipX = false;
+        }
+
+
+
+        brain.Update();
+    }
+
+
+    private void IdleUpdate()
+    {
+        //Execute
+        _currentTime += Time.deltaTime;
+
+        //CheckTriggers
+        if (_currentTime > 2.0f)
+        {
+            brain.ChangeState(EState.Wander);
+
+        }
+
+        if (Vector2.Distance(transform.position, _player.position) < distanceCheck)
+        {
+            brain.ChangeState(EState.Attack);
         }
     }
 
-    private void MoveCharacter(Vector2 dir)
+    private void WanderUpdate()
     {
-        rb.MovePosition((Vector2)transform.position + (dir * speed * Time.deltaTime));
+        //Execute
+        transform.position += _direction * Speed * Time.deltaTime;
+        _currentTime += Time.deltaTime;
+
+        //CheckTriggers
+        if (_currentTime > distanceCheck)
+        {
+            brain.ChangeState(EState.Idle);
+
+        }
+
+        if (Vector2.Distance(transform.position, _player.position) < distanceCheck)
+        {
+            brain.ChangeState(EState.Attack);
+        }
+    }
+
+    private void AttackUpdate()
+    {
+        //Execute
+        _direction = (_player.position - transform.position).normalized;
+        transform.position += _direction * Speed * Time.deltaTime;
+
+        //Trigger
+        if (Vector2.Distance(transform.position, _player.position) >= distanceCheck)
+        {
+            brain.ChangeState(EState.Idle);
+
+        }
     }
 
 }

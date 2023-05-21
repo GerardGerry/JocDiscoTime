@@ -31,7 +31,7 @@ public class FSM <T> where T : Enum
         _currentState = newState;
     }
 
-    public void SetOnState(T state, Action f)
+    public void SetOnStay(T state, Action f)
     {
         AllStates[state].OnStay = f;
     }

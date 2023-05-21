@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     PlayerShoot _playerShoot1;
     PlayerShoot _playerShoot2;
     WeaponPivotController _weaponPivotController;
+    PlayerHealth _playerHealth;
 
     Vector2 _input;
 
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
         _playerShoot = GameObject.Find("WeaponPivotPosition_1").GetComponentInChildren<PlayerShoot>();
         _playerShoot1 = GameObject.Find("WeaponPivotPosition_2").GetComponentInChildren<PlayerShoot>();
         _playerShoot2 = GameObject.Find("WeaponPivotPosition_3").GetComponentInChildren<PlayerShoot>();
+        _playerHealth = GetComponentInChildren<PlayerHealth>();
     }
 
     private void OnMove(InputValue value)
@@ -68,5 +70,10 @@ public class PlayerController : MonoBehaviour
         _playerShoot.ShootBullet();
         _playerShoot1.ShootBullet();
         _playerShoot2.ShootBullet();
+    }
+
+    private void PlayerHealthLow()
+    {
+        _inputMover.LowHealth();
     }
 }
