@@ -15,10 +15,10 @@ TagManager:
   - UI
   - CharacterCollider
   - PostProcessing
-  - Bullet
+  - PlayerBullet
   - SceneCollider
   - Enemy
-  - 
+  - EnemyBullet
   - 
   - 
   - 

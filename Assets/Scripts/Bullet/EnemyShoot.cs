@@ -4,36 +4,42 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    private GameObject player;
-    private Rigidbody2D rb;
-    public float force;
+    public GameObject bullet;
+    public Transform bulletPos;
+
     private float timer;
+    private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-
-        Vector3 direction = player.transform.position - transform.position;
-        rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
 
-        if (timer > 10)
+
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+        Debug.Log(distance);
+
+        if (distance < 8)
         {
-            Destroy(gameObject);
+            timer += Time.deltaTime;
+
+            if (timer > 2)
+            {
+                timer = 0;
+                shoot();
+            }
         }
+
+
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+
+    void shoot()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
+        Instantiate(bullet, bulletPos.position, Quaternion.identity);
     }
 }
