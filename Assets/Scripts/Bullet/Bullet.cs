@@ -6,7 +6,9 @@ public class Bullet : MonoBehaviour
 {
     public float velocidad = 10f; // Velocidad de la bala
     public float tiempoDeVida = 2f; // Cuánto tiempo (en segundos) debe vivir la bala antes de destruirse
-    public int daño = 1; // Cantidad de daño que hace la bala
+    
+    [SerializeField]
+    int daño; // Cantidad de daño que hace la bala
 
     private void Start()
     {
@@ -25,7 +27,7 @@ public class Bullet : MonoBehaviour
         var enemy = collision.collider.GetComponent<EnemyAi>();
         if (enemy)
         {
-            enemy.TakeHit(1);
+            enemy.TakeHit(daño);
         }
 
         Destroy(gameObject);

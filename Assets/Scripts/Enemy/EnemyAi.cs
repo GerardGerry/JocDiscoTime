@@ -5,9 +5,10 @@ using UnityEngine;
 public class EnemyAi : MonoBehaviour
 {
     public int distanceCheck;
-
-    public float Hitpoints;
-    public float MaxHitPoints = 3;
+    [SerializeField]
+    int Hitpoints;
+    [SerializeField]
+    int MaxHitPoints;
 
 
 
@@ -63,7 +64,7 @@ public class EnemyAi : MonoBehaviour
 
     }
 
-    public void TakeHit(float damage)
+    public void TakeHit(int damage)
     {
         Hitpoints -= damage;
         if (Hitpoints <= 0)
