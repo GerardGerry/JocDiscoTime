@@ -11,6 +11,8 @@ public class EnemyAI : MonoBehaviour
     public float Hitpoints;
     public float MaxHitPoints = 3;
 
+  
+
     SpriteRenderer spriteFlip;
     public enum EState
     {
@@ -89,6 +91,8 @@ public class EnemyAI : MonoBehaviour
         {
             spriteFlip.flipX = false;
         }
+
+      
 
         brain.Update();
     }

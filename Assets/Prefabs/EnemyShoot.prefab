@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &542256676853415833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2812668617185826723}
+  m_Layer: 0
+  m_Name: BulletPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2812668617185826723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542256676853415833}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6590316, y: 0.6590316, z: 0.6590316}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8341966601814860930}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8341966601814860932
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,6 +45,7 @@ GameObject:
   - component: {fileID: 8341966601814860929}
   - component: {fileID: 8341966601814860934}
   - component: {fileID: 8341966601814860935}
+  - component: {fileID: -6854389385650113594}
   m_Layer: 0
   m_Name: EnemyShoot
   m_TagString: Enemy
@@ -34,6 +66,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8341966602142698930}
+  - {fileID: 2812668617185826723}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -122,6 +155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceCheck: 0
+  Hitpoints: 0
+  MaxHitPoints: 3
   Speed: 2
 --- !u!50 &8341966601814860934
 Rigidbody2D:
@@ -170,6 +205,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96, y: 1.68}
   m_EdgeRadius: 0
+--- !u!114 &-6854389385650113594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8341966601814860932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c15982bfba2e843921a8dbb4778e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5399967847935550694, guid: ecc9fc43ee6968045a49e4c38a2fa3c0, type: 3}
+  bulletPos: {fileID: 2812668617185826723}
 --- !u!1 &8341966602142698931
 GameObject:
   m_ObjectHideFlags: 0
