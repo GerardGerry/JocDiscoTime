@@ -19,6 +19,12 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
         CheckAmount(m_currentHearts);
         hud.SetHealth(m_currentHearts);
     }
+    public void SpikesDamage()
+    {
+        m_currentHearts--;
+        CheckAmount(m_currentHearts);
+        hud.SetHealth(m_currentHearts);
+    }
 
     public void Heal()
     {
