@@ -45,7 +45,7 @@ public class Dash : MonoBehaviour
             canDash = false;
             _animator.SetTrigger("Roll");
 
-            UnityEngine.Debug.Log("Animation");
+            
             Vector2 playerDash = input.normalized * _dashingPower;
             _rigidBody.velocity = playerDash;
         }      

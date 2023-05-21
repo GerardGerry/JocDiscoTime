@@ -80,7 +80,7 @@ public class EnemyAi : MonoBehaviour
 
 
         var enemyPosition = new Vector2(transform.localPosition.x, transform.localPosition.y).normalized;
-        Debug.Log(enemyPosition);
+        
         if (enemyPosition.x < 0)
         {
             spriteFlip.flipX = true;

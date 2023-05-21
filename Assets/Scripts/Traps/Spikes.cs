@@ -11,7 +11,7 @@ public class Spikes : MonoBehaviour
         var spikesContact = collision.GetComponent<ItTakesDamage>();
         if(spikesContact != null && timer >= 2)
         {
-            Debug.Log("spiked");
+           
             spikesContact.TakeDamage();
             timer = 0;
         }

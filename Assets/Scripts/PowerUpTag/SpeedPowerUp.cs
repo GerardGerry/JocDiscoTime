@@ -11,7 +11,7 @@ public class SpeedPowerUp : MonoBehaviour
        if (activated)
         {
             Destroy(this.gameObject);
-            Debug.Log(_inputMover);
+           
             _inputMover.SpeedBoot(increasedSpeed);            
         }       
     }   

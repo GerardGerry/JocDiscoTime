@@ -74,7 +74,7 @@ public class InputMover : MonoBehaviour
 
     public void SpeedBoot(float speedUp)
     {
-        Debug.Log("Fiaum");
+        
         speed += speedUp;
         _force += speedUp;
     }
@@ -85,7 +85,7 @@ public class InputMover : MonoBehaviour
 
     public void LowHealth( int a)
     {
-        Debug.Log(a);
+        
         
 
         if(a == 1 && goSlower == true)
@@ -100,7 +100,7 @@ public class InputMover : MonoBehaviour
             _force = _force * 2;
             speed = speed * 2;
         }
-        Debug.Log(speed);
+        
     }
 
 }

@@ -23,7 +23,7 @@ public class DestroyedCollider : MonoBehaviour
     {
         this._force = _force;
         this._input = _input;
-        Debug.Log(_force);
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {              
