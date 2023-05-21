@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14372e9f49df9a049a9f371f9798ade8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceCheck: 0
-  Hitpoints: 0
+  distanceCheck: 20
+  Hitpoints: 3
   MaxHitPoints: 3
   Speed: 2
 --- !u!50 &8341966601814860934
@@ -189,7 +189,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
