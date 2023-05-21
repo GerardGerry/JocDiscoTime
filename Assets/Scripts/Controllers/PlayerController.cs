@@ -62,6 +62,10 @@ public class PlayerController : MonoBehaviour
             speedUp.IncreaseSpeed(true, _inputMover);
         }
     }
+    public void LowHealth()
+    {
+        _inputMover.LastHeart();
+    }
 
     private void OnPlayerShoot()
     {

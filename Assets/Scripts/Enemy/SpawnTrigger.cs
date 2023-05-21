@@ -5,14 +5,15 @@ using UnityEngine;
 public class SpawnTrigger : MonoBehaviour
 {
     EnemySpawner spawn;
+    [SerializeField]
+    List<GameObject> spawnList;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var createEnemies = collision.GetComponent<ItSpawns>();
-        if (collision.GetComponent<EnemySpawner>())
-        {
-            Debug.Log("Spawning enemies");
-            createEnemies.ActivateSpawn();
-        }
+        
+
+        Debug.Log("Spawning enemies");
+            spawnList.ActivateSpawn();
+        
     }
     
 }
