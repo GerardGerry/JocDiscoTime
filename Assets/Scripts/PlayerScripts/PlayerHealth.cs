@@ -8,15 +8,11 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
     [SerializeField]
     [Range (0, 8)]
     private int m_currentHearts = 6;
-    PlayerController _playerController;
+    
 
     [SerializeField]
     HUD hud;
 
-    public void Awake()
-    {
-        _playerController= GetComponentInParent<PlayerController>();
-    }
     public void TakeDamage()
     {
         m_currentHearts--;
@@ -34,9 +30,5 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
     {
         if (amount < 0) { m_currentHearts = 0; }
         else if (amount > 8) { m_currentHearts = 8; } 
-        else if(amount < 2) 
-        {
-            _playerController.LowHealth(); 
-        }
     }
 }

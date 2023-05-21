@@ -80,10 +80,5 @@ public class InputMover : MonoBehaviour
     {
         _destroyedCollider.PlayerData(_force, _input);
     }
-    public void LastHeart()
-    {
-        _force = _force/2;
-        speed = speed/2;
-    }
 
 }
