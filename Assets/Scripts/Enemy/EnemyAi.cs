@@ -14,6 +14,9 @@ public class EnemyAi : MonoBehaviour
 
     private Transform target;
     private Rigidbody2D rb;
+
+    private Collider2D colliderTest;
+
     private Animator anim;
     private Vector2 movement;
     public Vector3 dir;
@@ -26,6 +29,7 @@ public class EnemyAi : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
+        colliderTest = GetComponent<Collider2D>();
 
     }
 
@@ -51,7 +55,6 @@ public class EnemyAi : MonoBehaviour
     {
         if (isInChaseRange && !isInAttackRange)
         {
-
             MoveCharacter(movement);
         }
         if (isInAttackRange)

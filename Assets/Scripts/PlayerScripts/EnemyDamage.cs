@@ -11,7 +11,6 @@ public class EnemyDamage : MonoBehaviour
         var damageReciever = other.GetComponent<ItTakesDamage>();
         if (damageReciever != null)
         {
-            Debug.Log("hitu");
             damageReciever.TakeDamage();
         }
     }   
