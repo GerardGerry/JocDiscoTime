@@ -22,7 +22,7 @@ public class PlayerShoot : MonoBehaviour
         currentBulletIndex = 0; // Establecer la bala inicial
     }
 
-    void FixedUpdate()
+    void Update()
     {
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
 
