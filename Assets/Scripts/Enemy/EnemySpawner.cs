@@ -17,15 +17,18 @@ public class EnemySpawner : MonoBehaviour, ItSpawns
     {
        
     }
+    private void Update()
+    {
+        if(canSpawn)
+        {
+            timer += Time.deltaTime;
+            if (timer > maxSpawnTime) { StopSpawn(); }
+        }
+    }
 
     public void ActivateSpawn()
     {
         StartCoroutine(Spawner());
-        timer += Time.deltaTime;
-        //if (collision == collision.GetComponent("spawnTest"))
-        //{
-        //    StartCoroutine(Spawner());
-        //}
     }
     public void StopSpawn()
     {
