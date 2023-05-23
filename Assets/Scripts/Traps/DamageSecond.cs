@@ -15,7 +15,10 @@ public class DamageSecond : MonoBehaviour
             spikesContact.TakeDamage();
             timer = 0;
         }
-
     }
-    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        timer = 2;
+    }
+
 }
