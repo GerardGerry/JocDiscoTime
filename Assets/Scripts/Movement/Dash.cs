@@ -52,7 +52,6 @@ public class Dash : MonoBehaviour
             isDashing= true;
             canDash = false;
             _animator.SetTrigger("Roll");
-            Debug.Log("Duit");
             particles.Play();
             Vector2 playerDash = input.normalized * _dashingPower;
             _rigidBody.velocity = playerDash;

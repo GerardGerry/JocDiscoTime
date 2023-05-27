@@ -5,5 +5,5 @@ using UnityEngine;
 public interface ItSpawns
 {
     void ActivateSpawn();
-    void StopSpawn();
+    
 }
