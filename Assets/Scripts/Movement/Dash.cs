@@ -12,6 +12,7 @@ public class Dash : MonoBehaviour
     private Rigidbody2D _rigidBody;
     Animator _animator;
     Vector2 _input;
+    [SerializeField] private ParticleSystem particles;
 
     [SerializeField] private float _dashingPower = 20f;
     [SerializeField] private float _dashingCooldown = 1f;
@@ -52,7 +53,7 @@ public class Dash : MonoBehaviour
             canDash = false;
             _animator.SetTrigger("Roll");
             Debug.Log("Duit");
-            
+            particles.Play();
             Vector2 playerDash = input.normalized * _dashingPower;
             _rigidBody.velocity = playerDash;
             Invoke("StopDash", 0.2f);
