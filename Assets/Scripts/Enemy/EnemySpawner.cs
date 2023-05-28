@@ -13,10 +13,6 @@ public class EnemySpawner : MonoBehaviour, ItSpawns
     [SerializeField] float maxSpawnTime = 10.0f;
     float timer = 0f;
 
-    private void Start()
-    {
-       
-    }
     private void Update()
     {
         if(canSpawn)

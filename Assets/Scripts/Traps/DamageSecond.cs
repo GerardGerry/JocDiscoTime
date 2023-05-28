@@ -11,11 +11,13 @@ public class DamageSecond : MonoBehaviour
         var spikesContact = collision.GetComponent<ItTakesDamage>();
         if(spikesContact != null && timer >= 2)
         {
-           
             spikesContact.TakeDamage();
             timer = 0;
         }
-
     }
-    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        timer = 2;
+    }
+
 }

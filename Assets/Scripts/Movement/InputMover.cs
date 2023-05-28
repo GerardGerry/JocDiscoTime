@@ -46,14 +46,18 @@ public class InputMover : MonoBehaviour
 
     private void Update()
     {
-        if (controlType == ControlType.Force)
+        if(_dash.IsDashing())
         {
-            MoveByFoce();
+            if (controlType == ControlType.Force)
+            {
+                MoveByFoce();
+            }
+            if (controlType == ControlType.Speed)
+            {
+                Move();
+            }
         }
-        if (controlType == ControlType.Speed)
-        {
-            Move();
-        }
+        
     }
 
     public void SetInput(InputValue value)
