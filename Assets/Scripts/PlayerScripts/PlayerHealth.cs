@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
     [Range (0, 8)]
     private int m_currentHearts = 6;
     PlayerController _playerController;
+    [SerializeField] private ParticleSystem particles;
 
     [SerializeField]
     HUD hud;
@@ -29,6 +30,7 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
         m_currentHearts++;
         CheckAmount(m_currentHearts);
         hud.SetHealth(m_currentHearts);
+        particles.Play();
     }
     private void CheckAmount(int amount)
     {
