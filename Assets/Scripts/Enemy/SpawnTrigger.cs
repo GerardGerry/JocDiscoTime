@@ -22,6 +22,8 @@ public class SpawnTrigger : MonoBehaviour
                 spawn2.ActivateSpawn();
                 spawn3.ActivateSpawn();
                 spawn4.ActivateSpawn();
+
+        GetComponent<Collider2D>().enabled = false;
     }
     
 }
