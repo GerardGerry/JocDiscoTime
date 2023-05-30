@@ -13,27 +13,16 @@ public class EnemySpawner : MonoBehaviour, ItSpawns
     [SerializeField] float maxSpawnTime = 10.0f;
     float timer = 0f;
 
-    private void Update()
-    {
-        if(canSpawn)
-        {
-            timer += Time.deltaTime;
-            if (timer > maxSpawnTime) { StopSpawn(); }
-        }
-    }
 
     public void ActivateSpawn()
     {
         StartCoroutine(Spawner());
     }
-    public void StopSpawn()
-    {
-        canSpawn = false;
-    }
+    
     private IEnumerator Spawner() { 
     
         WaitForSeconds wait = new WaitForSeconds(spawnRate);
-       
+       timer= 0f;
         
         while (canSpawn)
         {
@@ -42,7 +31,7 @@ public class EnemySpawner : MonoBehaviour, ItSpawns
             int rand = Random.Range(0, enemyPrefabs.Length);
             GameObject enemyToSpawn = enemyPrefabs[rand];
             Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
-            
+            timer += spawnRate;
             if (timer >= maxSpawnTime) { canSpawn = false; }
 
         }
