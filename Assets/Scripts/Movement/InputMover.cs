@@ -65,7 +65,7 @@ public class InputMover : MonoBehaviour
     public void SetInput(InputValue value)
     {
         _input = value.Get<Vector2>();
-        if (_input.magnitude >= 0.1f && !_alreadyPlaying)
+        if (_input.magnitude >= 0.1f || _input.magnitude <= 0 && !_alreadyPlaying)
         {
             _alreadyPlaying = true;
             moveParticles.Play();
