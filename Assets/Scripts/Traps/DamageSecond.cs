@@ -8,7 +8,6 @@ public class DamageSecond : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         timer += Time.deltaTime;
-        Debug.Log(timer);
         var spikesContact = collision.GetComponent<ItTakesDamage>();
         if(spikesContact != null && timer >= 2)
         {
