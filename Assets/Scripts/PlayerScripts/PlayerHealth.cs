@@ -8,7 +8,14 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
     [SerializeField]
     [Range (0, 8)]
     private int m_currentHearts = 6;
+
+
     PlayerController _playerController;
+    GetHit _hit;
+    GetHeal _heal;
+
+
+
     [SerializeField] private ParticleSystem healingParticles;
     [SerializeField] private ParticleSystem BleedingParticles;
 
@@ -18,20 +25,27 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
     public void Awake()
     {
         _playerController = GetComponentInParent<PlayerController>();
+        _hit = GetComponentInChildren<GetHit>();
+        _heal = GetComponentInChildren<GetHeal>();
     }
     public void TakeDamage()
     {
         m_currentHearts--;
+        _hit.TakeDamage();
         CheckAmount(m_currentHearts);
         hud.SetHealth(m_currentHearts);
     }
 
     public void Heal()
     {
-        m_currentHearts++;
-        CheckAmount(m_currentHearts);
-        hud.SetHealth(m_currentHearts);
-        healingParticles.Play();
+        if(m_currentHearts != 8)
+        {
+            m_currentHearts++;
+            _heal.Heal();
+            CheckAmount(m_currentHearts);
+            hud.SetHealth(m_currentHearts);
+            healingParticles.Play();
+        }
     }
     private void CheckAmount(int amount)
     {

@@ -63,6 +63,19 @@ public class PlayerShoot : MonoBehaviour
         {
             GameObject newBullet = Instantiate(bullets[currentBulletIndex], transform.position, transform.rotation);
         }
+
+        if (currentBulletIndex == 0)
+        {
+            AudioManager.PlaySFX(AudioName.Shoot1, GetComponent<AudioSource>());
+        }
+        if (currentBulletIndex == 1)
+        {
+            AudioManager.PlaySFX(AudioName.Shoot2, GetComponent<AudioSource>());
+        }
+        if (currentBulletIndex == 2)
+        {
+            AudioManager.PlaySFX(AudioName.Shoot3, GetComponent<AudioSource>());
+        }
         // Resto del código para el comportamiento de la bala...
     }
 }

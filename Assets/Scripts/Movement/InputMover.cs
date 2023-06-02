@@ -70,14 +70,11 @@ public class InputMover : MonoBehaviour
             _alreadyPlaying = true;
             moveParticles.Play();
 
-            Debug.Log("aaaa" +_input.magnitude);
-
         }
         else
         {
             moveParticles.Stop();
             _alreadyPlaying = false;
-            Debug.Log("stop" + _input.magnitude);
         }
 
     }

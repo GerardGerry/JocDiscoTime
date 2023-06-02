@@ -11,6 +11,7 @@ public class Dash : MonoBehaviour
 {
     private Rigidbody2D _rigidBody;
     Animator _animator;
+    SoundDash _dash;
     Vector2 _input;
     [SerializeField] private ParticleSystem particles;
 
@@ -27,6 +28,8 @@ public class Dash : MonoBehaviour
     {
         _rigidBody = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
+        _dash = GetComponentInChildren<SoundDash>();
+        
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -53,6 +56,7 @@ public class Dash : MonoBehaviour
             canDash = false;
             _animator.SetTrigger("Roll");
             particles.Play();
+            _dash.PlayDash();
             Vector2 playerDash = input.normalized * _dashingPower;
             _rigidBody.velocity = playerDash;
             Invoke("StopDash", 0.2f);
