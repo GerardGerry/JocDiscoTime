@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.PlayerSFX(AudioName.Hit, GetComponent<AudioSource>());
         // Destruir la bala después de 'tiempoDeVida' segundos
         Destroy(gameObject, tiempoDeVida);
     }

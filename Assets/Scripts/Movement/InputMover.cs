@@ -11,6 +11,7 @@ public class InputMover : MonoBehaviour
     Dash _dash;
     DestroyedCollider _destroyedCollider;
     private GameObject player;
+    [SerializeField] private ParticleSystem moveParticles;
 
     Vector2 _input;
     Vector2 lastPosition;
@@ -36,6 +37,7 @@ public class InputMover : MonoBehaviour
     private float speed;
 
     bool goSlower = true;
+    private bool _alreadyPlaying;
 
     // Start is called before the first frame update
     void Awake()
@@ -63,12 +65,28 @@ public class InputMover : MonoBehaviour
     public void SetInput(InputValue value)
     {
         _input = value.Get<Vector2>();
+        if (_input.magnitude >= 0.1f || _input.magnitude <= 0 && !_alreadyPlaying)
+        {
+            _alreadyPlaying = true;
+            moveParticles.Play();
+
+            Debug.Log("aaaa" +_input.magnitude);
+
+        }
+        else
+        {
+            moveParticles.Stop();
+            _alreadyPlaying = false;
+            Debug.Log("stop" + _input.magnitude);
+        }
+
     }
 
     public void Move()
     {
         var targetVelocity = _input * speed;
         _rigidBody.velocity = Vector2.Lerp(_rigidBody.velocity, targetVelocity, _smoothing);
+       
     }
     private void MoveByFoce()
     {
