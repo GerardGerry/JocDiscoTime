@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -23,14 +25,18 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(isPaused)
+            if(isPaused) 
             {
                 ResumeGame();
+                
             }
             else
             {
                 PauseGame();
+                
             }
+
+            
         }
     }
 
@@ -39,6 +45,11 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        GameObject.Find("Player").GetComponent<PlayerInput>().enabled = false;
+
+
+
+
     }
 
     public void ResumeGame()
@@ -46,6 +57,10 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        GameObject.Find("Player").GetComponent<PlayerInput>().enabled = true;
+
+
+
     }
 
     public void GoToMainMenu()
