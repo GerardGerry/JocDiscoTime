@@ -10,9 +10,7 @@ public class AudioManager : MonoBehaviour
     public AudioFile[] allFilesSFX;
     public AudioFile[] allFileMusic;
 
-    [SerializeField]
     public AudioSource _musicSource;
-    [SerializeField]
     public AudioSource _sfxSource;
 
     [SerializeField]

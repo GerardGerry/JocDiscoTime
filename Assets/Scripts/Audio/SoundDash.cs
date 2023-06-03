@@ -6,6 +6,6 @@ public class SoundDash : MonoBehaviour
 {
     public void PlayDash()
     {
-        AudioManager.PlaySFX(AudioName.Dash, GetComponent<AudioSource>());
+        NewAudioManager.NewPlaySFX("newDash", GetComponent<AudioSource>());
     }
 }

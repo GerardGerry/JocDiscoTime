@@ -66,7 +66,7 @@ public class PlayerShoot : MonoBehaviour
 
         if (currentBulletIndex == 0)
         {
-            AudioManager.PlaySFX(AudioName.Shoot1, GetComponent<AudioSource>());
+            NewAudioManager.NewPlaySFX(("newShoot"), GetComponent<AudioSource>());
         }
         if (currentBulletIndex == 1)
         {

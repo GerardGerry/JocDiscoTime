@@ -7,6 +7,6 @@ public class GetHit : MonoBehaviour
 {
     public void TakeDamage()
     {
-        AudioManager.PlaySFX(AudioName.Hit, GetComponent<AudioSource>());
+        NewAudioManager.NewPlaySFX(("newHurt"), GetComponent<AudioSource>());
     }
 }

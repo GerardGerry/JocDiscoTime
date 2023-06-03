@@ -6,6 +6,6 @@ public class GetHeal : MonoBehaviour
 {
     public void Heal()
     {
-        AudioManager.PlaySFX(AudioName.Heal, GetComponent<AudioSource>());
+        NewAudioManager.NewPlaySFX(("newHeal"), GetComponent<AudioSource>());
     }
 }

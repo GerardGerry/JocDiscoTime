@@ -51,15 +51,18 @@ public class Dash : MonoBehaviour
     {
         if(canDash)
         {
-            dashTimer = 0;
-            isDashing= true;
-            canDash = false;
-            _animator.SetTrigger("Roll");
-            particles.Play();
-            _dash.PlayDash();
-            Vector2 playerDash = input.normalized * _dashingPower;
-            _rigidBody.velocity = playerDash;
-            Invoke("StopDash", 0.2f);
+            if(input != Vector2.zero)
+            {
+                dashTimer = 0;
+                isDashing = true;
+                canDash = false;
+                _animator.SetTrigger("Roll");
+                particles.Play();
+                _dash.PlayDash();
+                Vector2 playerDash = input.normalized * _dashingPower;
+                _rigidBody.velocity = playerDash;
+                Invoke("StopDash", 0.2f);
+            }
            // _rigidBody.velocity = 0;
             //_rigidBody.velocity = input.normalized * _dashingpower, ForceMode2D.Impulse
         }  
