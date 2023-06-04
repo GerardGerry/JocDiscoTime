@@ -14,8 +14,7 @@ public class NewAudioManager : MonoBehaviour
     public AudioSource _musicSource;
     public AudioSource _sfxSource;
 
-    public AudioMixerGroup musicMixerGroup;
-    public AudioMixerGroup Sfx;
+    public AudioMixer audioMixer;
 
     [SerializeField]
     float Global_SFX_Volume;
@@ -54,7 +53,7 @@ public class NewAudioManager : MonoBehaviour
         {
             var clip = file.Clip;
             newsource.clip = clip;
-            newsource.outputAudioMixerGroup = Sfx;
+            newsource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Sfx")[0];
             newsource.volume = file.Volume * Global_SFX_Volume;
             newsource.Play();
         }
@@ -68,7 +67,7 @@ public class NewAudioManager : MonoBehaviour
         {
             var clip = file.Clip;
             _musicSource.clip = clip;
-            _musicSource.outputAudioMixerGroup = musicMixerGroup;
+            _musicSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Maestro")[0]; ;
             _musicSource.volume = file.Volume * Global_Music_Volume;
             _musicSource.Play();
         }
