@@ -7,6 +7,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class InputMover : MonoBehaviour
 {
+    RunSound runSound;
     Rigidbody2D _rigidBody;
     Dash _dash;
     DestroyedCollider _destroyedCollider;
@@ -44,6 +45,8 @@ public class InputMover : MonoBehaviour
     {       
         _rigidBody = GetComponent<Rigidbody2D>();
         _dash = GetComponent<Dash>();
+        runSound = GetComponentInChildren<RunSound>();
+
     }
 
     private void Update()
@@ -69,10 +72,13 @@ public class InputMover : MonoBehaviour
         {
             _alreadyPlaying = true;
             moveParticles.Play();
+            runSound.SoundRun();
+
 
         }
         else
         {
+            runSound.StopSoundRun();
             moveParticles.Stop();
             _alreadyPlaying = false;
         }

@@ -37,17 +37,17 @@ public class NewAudioManager : MonoBehaviour
         }
     }
 
-    public static void NewPlayMusic(string name, AudioSource source = null)
+    public static void NewPlayMusic(string name, AudioSource source = null, bool play = true)
     {
-        Instance._PlayMusic(name, source);
+        Instance._PlayMusic(name, source, play);
     }
 
-    public static void NewPlaySFX(string name, AudioSource source = null)
+    public static void NewPlaySFX(string name, AudioSource source = null, bool play = true)
     {
-        Instance._PlaySFX(name, source);
+        Instance._PlaySFX(name, source, play);
     }
 
-    private void _PlaySFX(string soundName, AudioSource source = null)
+    private void _PlaySFX(string soundName, AudioSource source = null, bool play = true)
     {
         var newsource = source != null ? source : _sfxSource;
         var file = GetFileByNameSFX(soundName);
@@ -58,11 +58,19 @@ public class NewAudioManager : MonoBehaviour
             newsource.clip = clip;
             newsource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Sfx")[0];
             newsource.volume = file.Volume * Global_SFX_Volume;
-            newsource.Play();
+            if(play == true)
+            {
+                newsource.Play();
+            }
+            else
+            {
+                newsource.Stop();
+            }
+
         }
     }
 
-    private void _PlayMusic(string soundName, AudioSource source = null)
+    private void _PlayMusic(string soundName, AudioSource source = null, bool play = true)
     {
         var newsource = source != null ? source : _musicSource;
         var file = GetFileByNameMusic(soundName);
@@ -73,7 +81,14 @@ public class NewAudioManager : MonoBehaviour
             newsource.clip = clip;
             newsource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Music")[0]; ;
             newsource.volume = file.Volume * Global_Music_Volume;
-            newsource.Play();
+            if (play == true)
+            {
+                newsource.Play();
+            }
+            else
+            {
+                newsource.Stop();
+            }
         }
     }
 
