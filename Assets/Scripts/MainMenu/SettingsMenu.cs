@@ -44,9 +44,17 @@ public class SettingsMenu : MonoBehaviour
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
-    public void setVolume (float volume)
+    public void setVolumeMusic (float volumeMusic)
     {
-        //audioMixer.SetFloat("Volume", volume);
+        audioMixer.SetFloat("MusicSlider", volumeMusic);
+        
+        
+    }
+
+    public void setVolumeSfx(float volumeSfx)
+    {
+        audioMixer.SetFloat("SfxSlider", volumeSfx);
+
     }
 
     public void setFullscreen(bool isFullscreen)
