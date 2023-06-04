@@ -6,10 +6,6 @@ public class MusicGame : MonoBehaviour
 {
     public void PlayMusic1()
     {
-        AudioManager.PlayMusic(AudioName.Music1, GetComponent<AudioSource>());
-    }
-    public void PlayMusic2()
-    {
-        AudioManager.PlayMusic(AudioName.Music2, GetComponent<AudioSource>());
+        NewAudioManager.NewPlayMusic("music1", GetComponent<AudioSource>());
     }
 }

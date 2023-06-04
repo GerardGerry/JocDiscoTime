@@ -15,6 +15,7 @@ public class NewAudioManager : MonoBehaviour
     public AudioSource _sfxSource;
 
     public AudioMixer audioMixer;
+    MusicGame musicGame;
 
     [SerializeField]
     float Global_SFX_Volume;
@@ -24,9 +25,11 @@ public class NewAudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        musicGame = GetComponentInChildren<MusicGame>();
         if (Instance == null)
         {
             Instance = this;
+            musicGame.PlayMusic1();
         }
         else
         {
@@ -34,9 +37,9 @@ public class NewAudioManager : MonoBehaviour
         }
     }
 
-    public static void NewPlayMusic(string name)
+    public static void NewPlayMusic(string name, AudioSource source = null)
     {
-        Instance._PlayMusic(name);
+        Instance._PlayMusic(name, source);
     }
 
     public static void NewPlaySFX(string name, AudioSource source = null)
@@ -59,17 +62,18 @@ public class NewAudioManager : MonoBehaviour
         }
     }
 
-    private void _PlayMusic(string soundName, AudioSource orgSource = null)
+    private void _PlayMusic(string soundName, AudioSource source = null)
     {
+        var newsource = source != null ? source : _musicSource;
         var file = GetFileByNameMusic(soundName);
 
         if(file != null)
         {
             var clip = file.Clip;
-            _musicSource.clip = clip;
-            _musicSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Maestro")[0]; ;
-            _musicSource.volume = file.Volume * Global_Music_Volume;
-            _musicSource.Play();
+            newsource.clip = clip;
+            newsource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Music")[0]; ;
+            newsource.volume = file.Volume * Global_Music_Volume;
+            newsource.Play();
         }
     }
 
