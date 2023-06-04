@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.Audio;
 using UnityEngine;
 
 public class NewAudioManager : MonoBehaviour
@@ -12,6 +13,9 @@ public class NewAudioManager : MonoBehaviour
 
     public AudioSource _musicSource;
     public AudioSource _sfxSource;
+
+    public AudioMixerGroup musicMixerGroup;
+    public AudioMixerGroup Sfx;
 
     [SerializeField]
     float Global_SFX_Volume;
@@ -49,8 +53,9 @@ public class NewAudioManager : MonoBehaviour
         if(file != null)
         {
             var clip = file.Clip;
-            newsource.volume = file.Volume * Global_SFX_Volume;
             newsource.clip = clip;
+            newsource.outputAudioMixerGroup = Sfx;
+            newsource.volume = file.Volume * Global_SFX_Volume;
             newsource.Play();
         }
     }
@@ -62,12 +67,10 @@ public class NewAudioManager : MonoBehaviour
         if(file != null)
         {
             var clip = file.Clip;
+            _musicSource.clip = clip;
+            _musicSource.outputAudioMixerGroup = musicMixerGroup;
             _musicSource.volume = file.Volume * Global_Music_Volume;
-            if(clip != null)
-            {
-                _musicSource.clip = clip;
-                _musicSource.Play();
-            }
+            _musicSource.Play();
         }
     }
 
@@ -82,7 +85,12 @@ public class NewAudioManager : MonoBehaviour
     }
     private NewAudioFile GetFileByNameMusic(string soundName)
     {
-        return allFileMusic.First(x => x.Name == name);
+        var file = allFileMusic.FirstOrDefault(x => x.Name == soundName);
+        if (file != null)
+        {
+            return file;
+        }
+        return null;
     }
 
 
