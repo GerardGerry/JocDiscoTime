@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField]
-    List<GameObject> bullets; // Lista de GameObjects de balas
+    List<GameObject> bullets;
 
     int currentBulletIndex;
     float timer = 0f;
@@ -19,19 +19,19 @@ public class PlayerShoot : MonoBehaviour
 
     void Start()
     {
-        currentBulletIndex = 0; // Establecer la bala inicial
+        currentBulletIndex = 0;
     }
 
     void Update()
     {
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
 
-        if (scrollInput > 0f) // Desplazamiento hacia arriba
+        if (scrollInput > 0f)
         {
             // Cambiar a la siguiente bala
             currentBulletIndex = (currentBulletIndex + 1) % bullets.Count;
         }
-        else if (scrollInput < 0f) // Desplazamiento hacia abajo
+        else if (scrollInput < 0f)
         {
             // Cambiar a la bala anterior
             currentBulletIndex = (currentBulletIndex - 1 + bullets.Count) % bullets.Count;
@@ -70,12 +70,11 @@ public class PlayerShoot : MonoBehaviour
         }
         if (currentBulletIndex == 1)
         {
-            AudioManager.PlaySFX(AudioName.Shoot2, GetComponent<AudioSource>());
+            NewAudioManager.NewPlaySFX(("newShoot2"), GetComponent<AudioSource>());
         }
         if (currentBulletIndex == 2)
         {
-            AudioManager.PlaySFX(AudioName.Shoot3, GetComponent<AudioSource>());
+            NewAudioManager.NewPlaySFX(("newShoot3"), GetComponent<AudioSource>());
         }
-        // Resto del código para el comportamiento de la bala...
     }
 }
