@@ -12,14 +12,12 @@ public class Dash : MonoBehaviour
     private Rigidbody2D _rigidBody;
     Animator _animator;
     SoundDash _dash;
-    Vector2 _input;
     [SerializeField] private ParticleSystem particles;
 
     [SerializeField] private float _dashingPower = 20f;
     [SerializeField] private float _dashingCooldown = 1f;
 
     float timer = 0f;
-    float dashTimer;
     bool canDash = true;
     bool isDashing = false;
 
@@ -53,7 +51,6 @@ public class Dash : MonoBehaviour
         {
             if(input != Vector2.zero)
             {
-                dashTimer = 0;
                 isDashing = true;
                 canDash = false;
                 _animator.SetTrigger("Roll");
