@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
 {
@@ -18,6 +19,8 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
 
     [SerializeField] private ParticleSystem healingParticles;
     [SerializeField] private ParticleSystem BleedingParticles;
+
+    //[SerializeField] private SceneManager _sceneManager;
 
     [SerializeField]
     HUD hud;
@@ -49,7 +52,12 @@ public class PlayerHealth : MonoBehaviour, ItTakesDamage, ItHeals
     }
     private void CheckAmount(int amount)
     {
-        if (amount < 0) { m_currentHearts = 0; }
+
+        if (amount <= 0) 
+        {
+            SceneManager.LoadScene("MainMenu");
+            m_currentHearts = 0; 
+        }
         else if (amount > 8) { m_currentHearts = 8; }
         else if(amount == 3) { BleedingParticles.Stop(); }
         else if (amount < 3) 
